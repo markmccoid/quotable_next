@@ -1,0 +1,2286 @@
+[
+    {
+        "id": "aba979b7-3f9b-4b6b-9fc0-62bce85f4cfe",
+        "quote": "So much has been given to me, I have no time to ponder over that which has been denied.",
+        "author": "Helen Keller",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "5-25-2018"
+    },
+    {
+        "id": "9b361c6a-c452-49e3-824a-3fed34c70901",
+        "quote": "The best way to pay for a lovely moment is to enjoy it.",
+        "author": "Richard Bach",
+        "tags": [
+            "Happiness"
+        ],
+        "createDate": "5-25-2018"
+    },
+    {
+        "id": "93ef023a-06e1-4564-9ab9-944781ffe527",
+        "quote": "There is only one thing that makes a dream impossible to achieve: the fear of failure.",
+        "author": "Paulo Coelho",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "5-25-2018"
+    },
+    {
+        "id": "649c35c0-d355-11e8-acf3-49b3d7f39148",
+        "quote": "He who is not everyday conquering some fear has not learned the secret of life.",
+        "author": "Ralph Waldo Emerson",
+        "tags": [
+            "Resilience"
+        ],
+        "createDate": "10-19-2018"
+    },
+    {
+        "id": "854877c0-d355-11e8-acf3-49b3d7f39148",
+        "quote": "Be the best example you can possibly be and people will follow you.",
+        "author": "Bob Proctor",
+        "tags": [
+            "Leadership"
+        ],
+        "createDate": "10-19-2018"
+    },
+    {
+        "id": "928571e0-d355-11e8-acf3-49b3d7f39148",
+        "quote": "Happiness is the absence of the striving for happiness.",
+        "author": "Chuang-Tzu",
+        "tags": [
+            "Happiness"
+        ],
+        "createDate": "10-19-2018"
+    },
+    {
+        "id": "5e331d40-d4d9-11e8-a329-1777685a2c04",
+        "quote": "Failure should be our teacher, not our undertaker. Failure is delay, not defeat. It is a temporary detour, not a dead end.",
+        "author": "Denis Waitley",
+        "tags": [
+            "Resilience"
+        ],
+        "createDate": "10-20-2018"
+    },
+    {
+        "id": "8eb309d0-d4d9-11e8-b974-3b8074f0ff75",
+        "quote": "In three words I can sum up everything I've learned about life, it goes on.",
+        "author": "Robert Frost",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-20-2018"
+    },
+    {
+        "id": "28091000-d52c-11e8-9ade-9f65507c4148",
+        "quote": "A healthy attitude is contagious but don't wait to catch it from others. Be a carrier.",
+        "author": "Tom Stoppard",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-21-2018"
+    },
+    {
+        "id": "45113cb0-d7ff-11e8-af6e-69b9cc6dcf60",
+        "quote": "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
+        "author": "Helen Keller",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-24-2018"
+    },
+    {
+        "id": "213825b0-db29-11e8-8d00-59bdf79f5da6",
+        "quote": "Do your little bit of good where you are; it's those little bits of good put together that overwhelm the world.",
+        "author": "Desmond Tutu",
+        "authorBio": "Received Nobel Prize for Peace",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-28-2018"
+    },
+    {
+        "id": "72c654f0-db2a-11e8-8d00-59bdf79f5da6",
+        "quote": "Remember that the happiest people are not those getting more, but those giving more.",
+        "author": "H. Jackson Brown, Jr.",
+        "authorBio": "",
+        "tags": [
+            "Happiness"
+        ],
+        "createDate": "10-28-2018"
+    },
+    {
+        "id": "c4f85750-dbc5-11e8-9586-85c2933d695d",
+        "quote": "If you want to make your dreams come true, the first thing you have to do is wake up.",
+        "author": "J.M. Power",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-29-2018"
+    },
+    {
+        "id": "d3a92750-dc76-11e8-af55-29d88a59ece1",
+        "quote": "You cannot change the circumstances but you can change yourself. That is something you have charge of.",
+        "author": "Jim Rohn",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "createDate": "10-30-2018"
+    },
+    {
+        "id": "452ef970-dd87-11e8-8c48-57a48d9b062a",
+        "quote": "In the midst of winter, I found there was within me an invincible summer.",
+        "author": "Albert Camus",
+        "authorBio": "1913-1960 - Author - Journalist",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 3,
+        "createDate": "10-31-2018"
+    },
+    {
+        "id": "6dd9e100-e467-11e8-a91a-d34c0675fdf1",
+        "quote": "The world is full of magical things patiently waiting for our wits to grow sharper.",
+        "author": "Bertrand Russell",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "11-9-2018"
+    },
+    {
+        "id": "d7c75fe0-e6ef-11e8-8f58-fff1a5422af1",
+        "quote": "Who questions much, shall learn much, and retain much.",
+        "author": "Francis Bacon",
+        "authorBio": "1561-1626 - Philosopher - Scientist - Author",
+        "tags": [
+            "Knowledge"
+        ],
+        "rating": 2,
+        "createDate": "11-12-2018"
+    },
+    {
+        "id": "1ed56080-e6f0-11e8-8f58-fff1a5422af1",
+        "quote": "Imagination is more important than knowledge.",
+        "author": "Albert Einstein",
+        "authorBio": "Theoretical physicist",
+        "tags": [
+            "Knowledge",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-12-2018"
+    },
+    {
+        "id": "4c2c6ec0-e6f0-11e8-8f58-fff1a5422af1",
+        "quote": "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.",
+        "author": "Albert Einstein",
+        "authorBio": "Theoretical physicist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-12-2018"
+    },
+    {
+        "id": "0366bbc0-e950-11e8-bb45-019a12e74fcc",
+        "quote": "A smooth sea never made a skillful sailor.",
+        "author": "Franklin D. Roosevelt",
+        "authorBio": "1882-1945 - 32nd President of the United States",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 4,
+        "createDate": "11-15-2018"
+    },
+    {
+        "id": "bcbfce70-e95c-11e8-9082-13b44cc9bf11",
+        "quote": "Be faithful to that which exists within yourself.",
+        "author": "Andre Gide",
+        "authorBio": "1869-1951 - Author - Nobel Prize Winner in Literature",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-16-2018"
+    },
+    {
+        "id": "cb774140-ea25-11e8-969f-07fd04dd72ca",
+        "quote": "It's not what you look at that matters, it's what you see.",
+        "author": "Henry David Thoreau",
+        "authorBio": "1817-1862 - Poet - Philosopher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "11-17-2018"
+    },
+    {
+        "id": "2d51b910-e42a-11e8-be17-35a3e4027866",
+        "quote": "Rudeness is the weak man's imitation of strength.",
+        "author": "Eric Hoffer",
+        "authorBio": "1898-1983 - Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-9-2018"
+    },
+    {
+        "id": "91ac8a90-da46-11e8-bb4f-555a01a96d79",
+        "quote": "Whether you think you can or you think you can't, you are right.",
+        "author": "Henry Ford",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "10-27-2018"
+    },
+    {
+        "id": "ec2bed73-a1c9-4f19-82ce-c766226c35ab",
+        "quote": "Most of our obstacles would melt away if instead of cowering before them we should make up our minds to walk boldly through them.",
+        "author": "Orison Swett Marden",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "5-24-2018"
+    },
+    {
+        "id": "a2e17560-ebb6-11e8-bb17-5f9b2c483dc0",
+        "quote": "It takes as much energy to wish as it does to plan",
+        "author": "Eleanor Roosevelt",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "11-18-2018"
+    },
+    {
+        "id": "e31b89a0-ec7d-11e8-bcd0-25961b0a4ca2",
+        "quote": "We delight in the beauty of the butterfly, but rarely admit the changes it has gone through to achieve that beauty.",
+        "author": "Maya Angelou",
+        "authorBio": "198-2014 Poet",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-19-2018"
+    },
+    {
+        "id": "367d1de0-ecc2-11e8-bcd0-25961b0a4ca2",
+        "quote": "Persistence guarantees that results are inevitable.",
+        "author": "Paramahansa Yogananda",
+        "authorBio": "1893-1952 - Teacher of Meditation",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "11-20-2018"
+    },
+    {
+        "id": "433afbe0-ed91-11e8-b778-db4dde1cac4c",
+        "quote": "Never give up on a dream just because of the time it will take to accomplish it.  The time will pass anyway.",
+        "author": "Earl Nightingale",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "11-21-2018"
+    },
+    {
+        "id": "4c455b50-f06f-11e8-9ad4-ff4a0ab1a859",
+        "quote": "Genius might be the ability to say a profound thing in a simple way.",
+        "author": "Charles Bukowsko",
+        "authorBio": "1920-1994 - Poet - Novelist",
+        "tags": [
+            "Knowledge"
+        ],
+        "rating": 0,
+        "createDate": "11-25-2018"
+    },
+    {
+        "id": "7c278f40-f246-11e8-b37b-694854f5d39b",
+        "quote": "Over every mountain there is a path, although it may not be seen from the valley.",
+        "author": "Theodore Roethke",
+        "authorBio": "1908-1963 - Author",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "11-27-2018"
+    },
+    {
+        "id": "f2cfe780-f27f-11e8-9017-2b1501ef6e84",
+        "quote": "Meditation is not a way of making your mind quiet.  It's a way of entering into the quiet that's already there.",
+        "author": "Deepak Chopra",
+        "tags": [
+            "Mind",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-27-2018"
+    },
+    {
+        "id": "89d8cc10-f414-11e8-8929-2ba0afb66ee0",
+        "quote": "Children learn more from what you are than what you teach.",
+        "author": "W.E.B. DuBois",
+        "authorBio": "1868-1963 - Author - Editor",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-29-2018"
+    },
+    {
+        "id": "2c7bf580-f520-11e8-b602-db7d36207806",
+        "quote": "It is easier to act yourself into a new way of thinking, than it to think yourself into a new way of acting.",
+        "author": "Millard Fuller",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-30-2018"
+    },
+    {
+        "id": "7a4de7a0-e42c-11e8-a91a-d34c0675fdf1",
+        "quote": "Happiness does not lead to gratitude. Gratitude leads to happiness.",
+        "author": "David Steindl-Rast",
+        "authorBio": "Benedictine monk",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "11-9-2018"
+    },
+    {
+        "id": "06501890-e388-11e8-8d65-7d1f8d90018b",
+        "quote": "When you can do the common things of life in an uncommon way, you will command the attention of the world.",
+        "author": "George Washington Carver",
+        "authorBio": "1864-1943 - Botanist - Inventor",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-8-2018"
+    },
+    {
+        "id": "1590f7c0-d7fd-11e8-987e-5762c54fdd6f",
+        "quote": "Belief creates behaviors.",
+        "author": "Neale Donald Walsch",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "10-24-2018"
+    },
+    {
+        "id": "fd772300-f69a-11e8-a674-4310cab424c0",
+        "quote": "Gratitude in advance is the most powerful creative force in the universe.",
+        "author": "Neale Donald Walsch",
+        "authorBio": "Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "12-2-2018"
+    },
+    {
+        "id": "babd5b10-f77b-11e8-8d2f-6367a4f040c0",
+        "quote": "A word of encouragement during a failure is worth more than an hour of praise after success.",
+        "author": "Unknown",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "12-3-2018"
+    },
+    {
+        "id": "0a567360-db29-11e8-8d00-59bdf79f5da6",
+        "quote": "Blessed is he who expects nothing, for he shall never be disappointed.",
+        "author": "Alexander Pope",
+        "authorBio": "1688-1744 - Poet",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "10-28-2018"
+    },
+    {
+        "id": "0bf29fb1-2dc7-41b5-8b2b-b6157785ed52",
+        "quote": "Happiness doesn’t depend on who you are or what you have; it depends solely on what you think.",
+        "author": "Dale Carnegie",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "5-25-2018"
+    },
+    {
+        "id": "8010fbd0-0b1b-11e9-b793-e9277c959919",
+        "quote": "Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.",
+        "author": "Dr. Seuss",
+        "authorBio": "Theodor Seuss Geisel",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "12-28-2018"
+    },
+    {
+        "id": "50ec2360-1166-11e9-a4d5-dbad793301c9",
+        "quote": "Courage is contagious. When a brave man takes a stand, the spines of others are often stiffened.",
+        "author": "Billy Graham",
+        "authorBio": "1918-2018 - Evangelist",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "1-5-2019"
+    },
+    {
+        "id": "8241e760-1233-11e9-af1f-4df33223136b",
+        "quote": "Be Kind; Everyone You Meet is Fighting a Hard Battle",
+        "author": "Unknown",
+        "tags": [
+            "Truth",
+            "Hope"
+        ],
+        "rating": 5,
+        "createDate": "1-6-2019"
+    },
+    {
+        "id": "90ae85a0-1559-11e9-9f3f-7725848576ba",
+        "quote": "Chains of habit are too light to be felt until they're too heavy to be broken.",
+        "author": "Warren Buffett",
+        "authorBio": "Investor - Speaker - Philanthropist",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "1-10-2019"
+    },
+    {
+        "id": "4ec06a60-15f3-11e9-88ab-e55d60386597",
+        "quote": "A man is about as big as the things that make him angry.",
+        "author": "Winston Churchill",
+        "tags": [
+            "Leadership",
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "1-11-2019"
+    },
+    {
+        "id": "cdf34a50-1873-11e9-a70e-41cbc0268044",
+        "quote": "Nothing can stop the man with the right mental attitude from achieving his goal; nothing on earth can help the man with the wrong mental attitude.",
+        "author": "Thomas Jefferson ",
+        "authorBio": "1743-1826 - 3rd US President",
+        "tags": [
+            "Knowledge"
+        ],
+        "rating": 4,
+        "createDate": "1-14-2019"
+    },
+    {
+        "id": "9e008fb0-2020-11e9-8384-e96e5a858454",
+        "quote": "Difficulties strengthen the mind, as labor does the body.",
+        "author": "Lucius Annaeus Seneca",
+        "authorBio": "4 bce-65 ce - Roman Philosopher",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "1-24-2019"
+    },
+    {
+        "id": "cf881de0-2044-11e9-8384-e96e5a858454",
+        "quote": "The words you speak become the house you live in.",
+        "author": "Hafiz",
+        "authorBio": "1325-1390 Poet",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "1-24-2019"
+    },
+    {
+        "id": "a0b8d660-2127-11e9-90d7-ff00db00d289",
+        "quote": "Often when you think you're at the end of something, you're at the beginning of something else.",
+        "author": "Fred Rogers",
+        "authorBio": "Mr. Rogers",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 5,
+        "createDate": "1-26-2019"
+    },
+    {
+        "id": "e24c5250-22ad-11e9-b46f-dfadd38123f0",
+        "quote": "Changes are inevitable and not always controllable. What can be controlled is how you manage, react to and work through the change process.",
+        "author": "Kelly A. Morgan",
+        "authorBio": "Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "1-27-2019"
+    },
+    {
+        "id": "ca905c60-23fc-11e9-b46f-dfadd38123f0",
+        "quote": "If there's one thing that will stop people from achieving their goals, it's a wall. However, as I see it, without a wall there's no place to build a door.",
+        "author": "Craig D. Lounsbrough",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "1-29-2019"
+    },
+    {
+        "id": "b65071b0-26a7-11e9-b46f-dfadd38123f0",
+        "quote": "Every challenge, every adversity, contains within it the seeds of opportunity and growth.",
+        "author": "Roy Bennett",
+        "authorBio": "1957-2018 - Politician",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "2-2-2019"
+    },
+    {
+        "id": "9c45e0e0-28f3-11e9-8f59-6bac367bcd44",
+        "quote": "Achieving success is a challenge but so is struggling, so you may as well choose success.",
+        "author": "Rob Liano",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "2-4-2019"
+    },
+    {
+        "id": "abd90540-2a8e-11e9-8f59-6bac367bcd44",
+        "quote": "It's not what happens to you, but how you react to it that matters.",
+        "author": "Epictetus",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "2-6-2019"
+    },
+    {
+        "id": "139714d0-2d76-11e9-8f59-6bac367bcd44",
+        "quote": "If you get tired, learn to rest, not to quit.",
+        "author": "Bansky",
+        "authorBio": "Film Director",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "2-10-2019"
+    },
+    {
+        "id": "8f1b1d90-2ff6-11e9-8f59-6bac367bcd44",
+        "quote": "The price of inaction is far greater than the cost of making a mistake.",
+        "author": "Meister Eckhart",
+        "authorBio": "1260-1328 - Theologian",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "2-13-2019"
+    },
+    {
+        "id": "488f56f0-37e6-11e9-a3ff-b5196165f780",
+        "quote": "In essence, if we want to direct our lives, we must take control of our consistent actions. It's not what we do once in a while that shapes our lives, but what we do consistently.",
+        "author": "Tony Robbins",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "2-23-2019"
+    },
+    {
+        "id": "cf6cc420-3b13-11e9-a2de-5fcf2b83adde",
+        "quote": "Everything comes in time to him who knows how to wait.",
+        "author": "Leo Tolstoy",
+        "authorBio": "1828-1910 - Writer",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "2-27-2019"
+    },
+    {
+        "id": "84f9c140-3cad-11e9-90d5-3d0585d8fd54",
+        "quote": "Those who cannot change their minds cannot change anything.\n",
+        "author": "George Bernard Shaw",
+        "authorBio": "1856-1950 - Playwright",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "3-2-2019"
+    },
+    {
+        "id": "4e5644f0-42f8-11e9-91b9-87cce30c26d9",
+        "quote": "If you don't sacrifice for what you want, what you want becomes the sacrifice.",
+        "author": "Unknown",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "3-10-2019"
+    },
+    {
+        "id": "ecf18c70-e234-11e8-a06e-5bc8bd850ed2",
+        "quote": "Stop being afraid of what could go wrong and start being positive about what could go right.",
+        "author": "Unknown",
+        "authorBio": "",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "11-6-2018"
+    },
+    {
+        "id": "778c00c0-03a2-11e9-99a5-7d887c0f07d1",
+        "quote": "You can, you should, and if you’re brave enough to start, you will.",
+        "author": "Stephen King",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "12-19-2018"
+    },
+    {
+        "id": "0672b890-479d-11e9-a1b1-b79f9992fc81",
+        "quote": "The master has failed more times than the beginner has even tried.",
+        "author": "Unknown",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "3-15-2019"
+    },
+    {
+        "id": "fdd471f0-4bd0-11e9-b79f-1d071e5b0a2f",
+        "quote": "Failure is the condiment that gives success it's flavor.",
+        "author": "Truman Capote",
+        "authorBio": "1924-1984 - Novelist",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "3-21-2019"
+    },
+    {
+        "id": "c6563070-4c51-11e9-bad7-d9078a2d5c57",
+        "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit",
+        "author": "Will Durant",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "3-21-2019"
+    },
+    {
+        "id": "c9afe950-738e-11e9-b0e0-c3fba693d849",
+        "quote": "A little progress each day adds up to big results.",
+        "author": "Diana Martin",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "5-10-2019"
+    },
+    {
+        "id": "d5df4400-738e-11e9-b0e0-c3fba693d849",
+        "quote": "Every day of our lives, we are on the verge of making those slight changes that would make all the difference.",
+        "author": "Mignon McLaughlin",
+        "tags": [
+            "Resilience",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "5-10-2019"
+    },
+    {
+        "id": "2dfba1e0-752b-11e9-9c3a-19c1414ab54d",
+        "quote": "The mind is everything. What you think you become.",
+        "author": "Buddha",
+        "tags": [
+            "Mind"
+        ],
+        "rating": 5,
+        "createDate": "5-12-2019"
+    },
+    {
+        "id": "f29c7040-791a-11e9-a9f1-fbf1624c4c06",
+        "quote": "May your life preach more loudly than your lips.",
+        "author": "William Ellery Channing",
+        "authorBio": "1780-1842 - Unitarian Preacher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "5-17-2019"
+    },
+    {
+        "id": "891c7da0-796e-11e9-a24c-79628232502e",
+        "quote": "You are not your struggles. You are the survivor who keeps moving forward in spite of them.",
+        "author": "Lori Deschene",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "5-18-2019"
+    },
+    {
+        "id": "42ed3df0-7b13-11e9-86ef-f3a178063bdd",
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "author": "Albert Einstein",
+        "authorBio": "Theoretical physicist",
+        "tags": [
+            "Knowledge",
+            "Resilience",
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "5-20-2019"
+    },
+    {
+        "id": "7986b260-8261-11e9-9659-e5bbdf2e6338",
+        "quote": "We won't be distracted by comparison if we are captivated with purpose.",
+        "author": "Bob Goff",
+        "tags": [
+            "Truth",
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "5-29-2019"
+    },
+    {
+        "id": "410544d0-8cbe-11e9-874e-215b7215859e",
+        "quote": "Happiness is when what you think, what you say, and what you do are in harmony.",
+        "author": "Mahatma Gandhi",
+        "authorBio": "1869-1948 - Indian Activist",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 4,
+        "createDate": "6-11-2019"
+    },
+    {
+        "id": "f8109480-923c-11e9-821a-e95327f374ac",
+        "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+        "author": "Aristotle",
+        "authorBio": "384BC-322BC - Greek Philosopher",
+        "tags": [
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "6-18-2019"
+    },
+    {
+        "id": "b080ecb0-a122-11e9-9bf5-f718216a2b3f",
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "author": "Eleanor Roosevelt",
+        "authorBio": "1884-1962 - American Political Figure-Former First Lady",
+        "tags": [
+            "Motivation",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "7-7-2019"
+    },
+    {
+        "id": "d311a620-a122-11e9-9bf5-f718216a2b3f",
+        "quote": "You have power over your mind, not outside events. Realize this, and you will find strength.",
+        "author": "Marcus Aurelius",
+        "authorBio": "121AD-180AD - Roman Emperor",
+        "tags": [
+            "Truth",
+            "Mind"
+        ],
+        "rating": 4,
+        "createDate": "7-7-2019"
+    },
+    {
+        "id": "f562e590-a122-11e9-9bf5-f718216a2b3f",
+        "quote": "Before you act, listen. Before you react, think. Before you spend, earn. Before you criticize, wait. Before you quit, try.",
+        "author": "William Arthur Ward",
+        "authorBio": "1921-1994 - Writer",
+        "tags": [
+            "Truth",
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "7-7-2019"
+    },
+    {
+        "id": "dc3d0d50-791a-11e9-a9f1-fbf1624c4c06",
+        "quote": "I have learned silence from the talkative, toleration from the intolerant, and kindness from the unkind; yet, strange, I am ungrateful to those teachers.",
+        "author": "Khalil Gibran",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "5-17-2019"
+    },
+    {
+        "id": "fc20db10-aaf2-11e9-9135-65731217cd1b",
+        "quote": "To live is the rarest thing in the world, most people just exist.",
+        "author": "Oscar Wilde",
+        "authorBio": "1854-1900 - Poet-Playwright",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-20-2019"
+    },
+    {
+        "id": "fc44bdb0-a687-11e9-8474-ff45558935ce",
+        "quote": "Those who can imagine anything can create the impossible.",
+        "author": "Alan Turing",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "7-14-2019"
+    },
+    {
+        "id": "a88d5ab0-b0eb-11e9-9a24-e5d055ef43db",
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "author": "Franklin D. Roosevelt",
+        "authorBio": "1882-1945 - 32nd President of the United States",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "7-27-2019"
+    },
+    {
+        "id": "bec7d080-b0eb-11e9-9a24-e5d055ef43db",
+        "quote": "Security is mostly a superstition. Life is either a daring adventure or nothing.",
+        "author": "Helen Keller",
+        "authorBio": "1880-1968 - Author-Political Activist",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "7-27-2019"
+    },
+    {
+        "id": "d30e6590-b0eb-11e9-9a24-e5d055ef43db",
+        "quote": "The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty.",
+        "author": "Winston Churchill",
+        "authorBio": "1874-1965 - British Politician-Army Officer-Writer",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "7-27-2019"
+    },
+    {
+        "id": "dbdb3720-b7f8-11e9-93b1-fd43de6b31ad",
+        "quote": "Too many of us are not living our dreams because we are living our fears.",
+        "author": "Les Brown",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "8-5-2019"
+    },
+    {
+        "id": "337d25f0-bbe7-11e9-a4ca-0922ac580ec4",
+        "quote": "Strength and growth come only through continuous effort and struggle.",
+        "author": "Napoleon Hill",
+        "authorBio": "1883-1970 - American Writer",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-10-2019"
+    },
+    {
+        "id": "4362aad0-bbe7-11e9-a4ca-0922ac580ec4",
+        "quote": "The world is changed by your example, not by your opinion.",
+        "author": "Paulo Coelho",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "8-10-2019"
+    },
+    {
+        "id": "864f4cf0-c235-11e9-9d46-6f792c70d2e6",
+        "quote": "With the new day comes new strength and new thoughts.",
+        "author": "Eleanor Roosevelt",
+        "authorBio": "1884-1962 - American Political Figure-Former First Lady",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "8-18-2019"
+    },
+    {
+        "id": "e9eddac0-d265-11e9-a8c0-6deb514eda2d",
+        "quote": "It's not so much what we have in this life that matters. It's what we do with what we have.",
+        "author": "Fred Rogers",
+        "authorBio": "Mr. Rogers 1928-2003 - Musician-Puppeteer-Writer-Producer",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "9-8-2019"
+    },
+    {
+        "id": "cf5f90c0-d82f-11e9-9fa3-895530c02fbd",
+        "quote": "The reward of our work is not what we get, but what we become.",
+        "author": "Paulo Coelho",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "9-15-2019"
+    },
+    {
+        "id": "07317dc0-ea09-11e9-ade8-09a5fd622381",
+        "quote": "You always pass failure on the way to success.",
+        "author": "Mickey Rooney",
+        "authorBio": "1920-2014 - Actor",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "10-8-2019"
+    },
+    {
+        "id": "212021f0-ea09-11e9-ade8-09a5fd622381",
+        "quote": "You're off to great places, today is your day. Your mountain is waiting, so get on your way.",
+        "author": "Dr. Seuss",
+        "authorBio": "Theodor Seuss Geisel 1904-1991",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "10-8-2019"
+    },
+    {
+        "id": "63eb8c00-f7a0-11e9-88c3-df685d95023d",
+        "quote": "Happiness is an attitude. We either make ourselves miserable, or happy and strong. The amount of work is the same.",
+        "author": "Francesca Reigler",
+        "authorBio": "Artist",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "10-25-2019"
+    },
+    {
+        "id": "7a786790-f7a0-11e9-88c3-df685d95023d",
+        "quote": "The struggle you're in today is developing the strength you need tomorrow.",
+        "author": "Robert Tew",
+        "authorBio": "Writer",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "10-25-2019"
+    },
+    {
+        "id": "92e28ea0-f7a0-11e9-88c3-df685d95023d",
+        "quote": "I believe the world is as we choose to view it. Simple as that. Our happiness is, in the end, up to us, and to no one else.",
+        "author": "Susan Fletcher",
+        "authorBio": "Writer",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "10-25-2019"
+    },
+    {
+        "id": "507e62f0-fd72-11e9-840e-4bcdb58a7eb3",
+        "quote": "I say luck is when an opportunity comes along and you're prepared for it.",
+        "author": "Denzel Washington",
+        "authorBio": "Actor",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "11-2-2019"
+    },
+    {
+        "id": "e37f4380-fea8-11e9-a652-f3ac8f2ef67a",
+        "quote": "Success is the sum of small efforts repeated day in and day out.",
+        "author": "Robert Collier",
+        "authorBio": "1885-1950 - Author",
+        "tags": [
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-3-2019"
+    },
+    {
+        "id": "c82c0eb0-0047-11ea-98da-db667c09f492",
+        "quote": "Just when the caterpillar thought the world was ending, he turned into a butterfly.",
+        "author": "Proverb",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 5,
+        "createDate": "11-5-2019"
+    },
+    {
+        "id": "e8795050-0764-11ea-bb9c-6dcd2e5c7871",
+        "quote": "To accomplish great things, we must not only act, but also dream, not only plan, but also believe.",
+        "author": "Anatole France",
+        "authorBio": "1844-1924 - Poet",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "11-15-2019"
+    },
+    {
+        "id": "bbf354a0-0f2e-11ea-ac57-d38b721087d8",
+        "quote": "The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
+        "author": "Albert Einstein",
+        "authorBio": "Theoretical - 1879-1955 - Physicist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-24-2019"
+    },
+    {
+        "id": "983f3560-1195-11ea-9859-3f6ad6e90ecf",
+        "quote": "Happy people build their inner world, unhappy people blame their outer world.",
+        "author": "T. Harv Eker",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "11-27-2019"
+    },
+    {
+        "id": "643f5740-17df-11ea-b073-130c10902526",
+        "quote": "Our deepest fear is not that we are inadequate. Our deepest fear is that we are powerful beyond measure. It is our light not our darkness, that most frightens us.",
+        "author": "Marianne Williamson",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "12-5-2019"
+    },
+    {
+        "id": "72957100-1d5a-11ea-b9dd-bd1fce5fb9da",
+        "quote": "Success is liking yourself, liking what you do, and liking how you do it.",
+        "author": "Maya Angelou",
+        "authorBio": "198-2014 Poet",
+        "tags": [
+            "Knowledge"
+        ],
+        "rating": 0,
+        "createDate": "12-12-2019"
+    },
+    {
+        "id": "66f10980-2724-11ea-99ca-2d625b18d3d3",
+        "quote": "Being aware of a single shortcoming within yourself is far more\nuseful than being aware of a thousand in someone else.",
+        "author": "Dalai Lama",
+        "tags": [
+            "Truth",
+            "Knowledge"
+        ],
+        "rating": 5,
+        "createDate": "12-25-2019"
+    },
+    {
+        "id": "2c74c9b0-30fa-11ea-b742-aff7a7166d3f",
+        "quote": "Most people are about as happy as they make up their minds to be.",
+        "author": "Abraham Lincoln",
+        "authorBio": "1809-1865 - Former President of the United States",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "1-6-2020"
+    },
+    {
+        "id": "eb5109d0-d82f-11e9-9fa3-895530c02fbd",
+        "quote": "The best way to predict the future is to create it.",
+        "author": "Abraham Lincoln",
+        "authorBio": "1809-1865 - Former President of the United States",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "9-15-2019"
+    },
+    {
+        "id": "98eee0c0-4181-11ea-9e80-f39f842139c2",
+        "quote": "Do not let what you cannot do interfere with what you can do.",
+        "author": "John Wooden",
+        "authorBio": "1910-2010 Former Basketball Player",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "1-27-2020"
+    },
+    {
+        "id": "ea2e8b50-4958-11ea-8049-7900bb7fb308",
+        "quote": "Everything that touches your life is an opportunity if you discover its proper use.",
+        "author": "Wallace D. Wattles",
+        "authorBio": "1860-1911 - Writer",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "2-6-2020"
+    },
+    {
+        "id": "3cb417a0-5115-11ea-9a23-8dc5a54a0e52",
+        "quote": "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.",
+        "author": "Martin Luther King Jr.",
+        "authorBio": "1928-1968 - Minister and Civil Rights Activist",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "2-16-2020"
+    },
+    {
+        "id": "8c29d1b0-5117-11ea-90d9-ffbac95ac793",
+        "quote": "The smallest deed is better than the greatest intention.",
+        "author": "John Burroughs",
+        "authorBio": "1837-1921 - Essayist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "2-16-2020"
+    },
+    {
+        "id": "a2ce50a0-577d-11ea-93b3-61ca1748a240",
+        "quote": "Reflect upon your present blessings of which every man has plenty; not on your past misfortunes of which all men have some.",
+        "author": "Charles Dickens",
+        "authorBio": "1812-1870 - Writer",
+        "tags": [
+            "Truth",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "2-24-2020"
+    },
+    {
+        "id": "b3b31d10-577d-11ea-93b3-61ca1748a240",
+        "quote": "Your present circumstances don't determine where you can go. They merely determine where you start.",
+        "author": "Nido Qubein",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "2-24-2020"
+    },
+    {
+        "id": "16b5b570-627e-11ea-b1de-87212f4b9999",
+        "quote": "Reset. Readjust. Restart. Refocus. As many times as you need to. Just don't quit.",
+        "author": "Unknown",
+        "tags": [
+            "Motivation",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "3-9-2020"
+    },
+    {
+        "id": "ba7da3e0-6f7e-11ea-83da-15bd038e2922",
+        "quote": "It is in your moments of decision that your destiny is shaped.",
+        "author": "Tony Robbins",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "3-26-2020"
+    },
+    {
+        "id": "7b0c5620-75c3-11ea-b04a-0976675dbaae",
+        "quote": "Beware the stories you read or tell; subtly, at night, beneath the waters of consciousness, they are altering your world.",
+        "author": "Ben Okri",
+        "authorBio": "Nigerian Poet and Novelist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "4-3-2020"
+    },
+    {
+        "id": "bf152000-7bf8-11ea-919e-b72e1f7c3c59",
+        "quote": "A winner is a dreamer who never gives up.",
+        "author": "Nelson Madela",
+        "authorBio": "1918-2013 - President of South Africa 1994-1999-Humanitarian-Social Activist",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "4-11-2020"
+    },
+    {
+        "id": "d8dd4be0-8308-11ea-9be2-b1ec15634098",
+        "quote": "Success doesn't come from what you do occasionally. It comes from what you do consistently.",
+        "author": "Marie Forleo",
+        "authorBio": "Life Coach-Motivational Speaker-Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "4-20-2020"
+    },
+    {
+        "id": "6cc98590-86aa-11ea-a7a4-f3a329151a8b",
+        "quote": "If you correct your mind, the rest of your life will fall into place.",
+        "author": "Lao Tzu",
+        "authorBio": "Chinese Philosopher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "4-25-2020"
+    },
+    {
+        "id": "004860b0-9f43-11ea-b5db-2900515d21c8",
+        "quote": "Life is never made unbearable by circumstances, but only by lack of meaning and purpose.",
+        "author": "Viktor Frankl ",
+        "authorBio": "1905-1997 - Psychiatrist-Author",
+        "tags": [
+            "Happiness",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "5-26-2020"
+    },
+    {
+        "id": "22a9fd80-b3c0-11ea-91e9-b53189299612",
+        "quote": "Always remember that your success begins inside you: if you can't see it first, no one else ever will.",
+        "author": "Chuck Norris",
+        "authorBio": "Actor-Martial Artist",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "6-21-2020"
+    },
+    {
+        "id": "827e1c50-b3ca-11ea-bd7a-dfe310b96201",
+        "quote": "A man's reading program should be as carefully planned as his diet, for that too is food, without which he cannot grow mentally.",
+        "author": "Andrew Carnegie",
+        "authorBio": "1835-1919 - Industrialist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "6-21-2020"
+    },
+    {
+        "id": "bdadbb30-b4f8-11ea-8b34-db6c2358ac8e",
+        "quote": "An arrow can only be shot by pulling it backward. When life is dragging you back with difficulties, it means it's going to launch you into something great.",
+        "author": "Pablo Coelho",
+        "authorBio": "Author",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "6-22-2020"
+    },
+    {
+        "id": "7d660960-be58-11ea-b7ec-fd5c78c10c95",
+        "quote": "Every time I thought I was being rejected from something good, I was actually being re-directed to something better.",
+        "author": "Steve Maraboli",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "7-4-2020"
+    },
+    {
+        "id": "1e784cc0-be6b-11ea-b7ec-fd5c78c10c95",
+        "quote": "You gain strength, courage and confidence by every experience in which you really stop to look fear in the face. You must do the things you think you are unable to do.",
+        "author": "Eleanor Roosevelt",
+        "authorBio": "1884-1962 - American Political Figure-Former First Lady",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "7-4-2020"
+    },
+    {
+        "id": "251a9790-c122-11ea-b1c8-4be54462a449",
+        "quote": "When you see your worth, you'll find it harder to stay around people who don't.",
+        "author": "Unknown",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-8-2020"
+    },
+    {
+        "id": "88684010-c53a-11ea-a320-05c838d1e6b4",
+        "quote": "What we see depends mainly on what we look for.",
+        "author": "John Lubbock",
+        "authorBio": "1834-1913 - English Banker-Scientist-Philanthropist",
+        "tags": [
+            "Mind",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-13-2020"
+    },
+    {
+        "id": "b39bfe90-c96b-11ea-8900-79c005e40ced",
+        "quote": "If you cannot find peace within yourself, you will never find it anywhere else",
+        "author": "Marvin Gaye",
+        "tags": [
+            "Hope",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-18-2020"
+    },
+    {
+        "id": "29cfbfb0-d0cf-11ea-ae72-81e958247252",
+        "quote": "The cave you fear to enter holds the treasure that you seek.",
+        "author": "Joseph Campbell",
+        "authorBio": "1904-1987 - Professor",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-28-2020"
+    },
+    {
+        "id": "36af7ea0-d0cf-11ea-ae72-81e958247252",
+        "quote": "Never let your fear decide your future.",
+        "author": "Unknown",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-28-2020"
+    },
+    {
+        "id": "59180bd0-d64f-11ea-af71-8763c3f8415e",
+        "quote": "Success is nothing more than a few simple disciplines, practiced every day.",
+        "author": "Jim Rohn",
+        "authorBio": "1930-2009 - American Entrepreneur-Author",
+        "tags": [
+            "Motivation",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "8-4-2020"
+    },
+    {
+        "id": "5a25e8b0-dcfa-11ea-8173-9df0988c6a6f",
+        "quote": "There is meaning in every journey that is unknown to the traveler.",
+        "author": "Dietrich Bonhaeffer",
+        "authorBio": "1906-1945 Pastor",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-12-2020"
+    },
+    {
+        "id": "223edbd0-e274-11ea-8714-9965fd821396",
+        "quote": "The control center of your life is your attitude.",
+        "author": "Norman Cousins",
+        "authorBio": "1915-1990, Journalist and Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-19-2020"
+    },
+    {
+        "id": "581a8c20-e66d-11ea-99d9-f1f497809143",
+        "quote": "If the average person realized the power he wields over his life and destiny, he would live in a perpetual state of wonder and thanksgiving.",
+        "author": "Earl Nightingale",
+        "authorBio": "1921-1989, Author and Radio Personality",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-24-2020"
+    },
+    {
+        "id": "e34d1220-edf9-11ea-9064-2fae9106cea7",
+        "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
+        "author": "Winston Churchill",
+        "authorBio": "1874-1965 - British Politician-Army Officer-Writer",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "9-3-2020"
+    },
+    {
+        "id": "8c37faf0-efa6-11ea-b16a-0335cb0cbd0d",
+        "quote": "Sow a thought and you reap an action; sow an act and you reap a habit; sow a habit and you reap a character; sow a character and you reap a destiny.",
+        "author": "Ralph Waldo Emerson",
+        "authorBio": "1803-1882 - American Essayist-Poet",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "9-5-2020"
+    },
+    {
+        "id": "2cd9a1d0-f1e0-11ea-ac0c-31c2c239a125",
+        "quote": "When you can be happy in the midst of hardship, then you see the true potential of the mind.",
+        "author": "Huanchu Daoren",
+        "authorBio": "1572-1620 - Chinese Philosopher",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "9-8-2020"
+    },
+    {
+        "id": "620ed9d0-f756-11ea-8e47-d728c3f500c9",
+        "quote": "Some people look for a beautiful place. Others make a place beautiful.",
+        "author": "Hazrat Inayat Khan",
+        "authorBio": "1882-1927 - Teacher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "9-15-2020"
+    },
+    {
+        "id": "2c975490-fe08-11ea-80da-a122e6cb6ca6",
+        "quote": "Accept responsibility for your life. Know that it is you who will get you to where you want to go, no one else.",
+        "author": "Les Brown",
+        "authorBio": "Motivational Speaker",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "9-23-2020"
+    },
+    {
+        "id": "0e19b950-05d2-11eb-9ebb-8ddb7557bb94",
+        "quote": "The gem cannot be polished without friction, nor man perfected without trials.",
+        "author": "Chinese Proverb",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "10-3-2020"
+    },
+    {
+        "id": "b4549750-1666-11eb-97c5-8fc9230a4ac7",
+        "quote": "When some things go wrong, take a moment to be thankful for the many things that are going right.",
+        "author": "Unknown",
+        "tags": [
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "10-24-2020"
+    },
+    {
+        "id": "121eed00-28f4-11eb-a346-e3197d414585",
+        "quote": "People do not decide their futures, they decide their habits and their habits decide their futures.",
+        "author": "F. Matthias Alexander",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-17-2020"
+    },
+    {
+        "id": "96c6e5d0-2d90-11eb-9e4c-3de17c552c39",
+        "quote": "We can’t have change without loss, which is why so often people say they want change but nonetheless stay exactly the same.",
+        "author": "Lori Gottlieb",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "11-23-2020"
+    },
+    {
+        "id": "be730d90-38fb-11eb-aadf-51ea6185383a",
+        "quote": "The difference between school and life? In school, you're taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.",
+        "author": "Tom Bodett",
+        "authorBio": "American Author",
+        "tags": [
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "12-7-2020"
+    },
+    {
+        "id": "07f0d210-3be3-11eb-a3db-49c2da499c19",
+        "quote": "Keep on going, and the chances are that you will stumble on something, perhaps when you are least expecting it. I never heard of anyone ever stumbling on something sitting down.",
+        "author": "Charles F. Kettering",
+        "authorBio": "1876-1958 - American Inventor",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "12-11-2020"
+    },
+    {
+        "id": "208f4db0-3ce2-11eb-9f0a-75095730c34e",
+        "quote": "Formal education will make you a living; self-education will make you a fortune.",
+        "author": "Jim Rohn",
+        "authorBio": "1930-2009 - American Entrepreneur-Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "12-12-2020"
+    },
+    {
+        "id": "a1f93a30-4018-11eb-a260-335bfd82742f",
+        "quote": "If you don't design your own life plan, chances are you'll fall into someone else's plan. And guess what they have planned for you? Not much.",
+        "author": "Jim Rohn",
+        "authorBio": "1930-2009 - American Entrepreneur-Author",
+        "tags": [
+            "Truth",
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "12-16-2020"
+    },
+    {
+        "id": "d8748ac0-4080-11eb-80da-bdd136823b55",
+        "quote": "Do not wish for an easy life. Wish for the strength to endure a difficult one.",
+        "author": "Bruce Lee",
+        "tags": [
+            "Motivation",
+            "Truth",
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "12-17-2020"
+    },
+    {
+        "id": "31b13980-71f0-11eb-9178-872175d72628",
+        "quote": "People only see what they are prepared to see.",
+        "author": "Ralph Waldo Emerson",
+        "authorBio": "1803-1882 - American Essayist-Poet",
+        "tags": [
+            "Mind",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "2-18-2021"
+    },
+    {
+        "id": "7b719040-7940-11eb-bacf-c578aadf6fc2",
+        "quote": "The only person you are destined to become is the person you decide to be.",
+        "author": "Ralph Waldo Emerson",
+        "authorBio": "1803-1882 - American Essayist-Poet",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "2-27-2021"
+    },
+    {
+        "id": "9b4ca750-8d0f-11eb-88c1-49d1f094733e",
+        "quote": "There is only one way to happiness and that is to cease worrying about things which are beyond the power of our will.",
+        "author": "Epictetus",
+        "authorBio": "50 AD-135 AD - Greek Stoic Philosopher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "3-24-2021"
+    },
+    {
+        "id": "2fe85f80-a147-11eb-82c0-f53b4a828790",
+        "quote": "Most people have the will to win, few have the will to prepare to win.",
+        "author": "Bobby Knight",
+        "authorBio": "Basketball coach",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "4-19-2021"
+    },
+    {
+        "id": "82b8c5c0-a1d7-11eb-8800-bb1e648d2512",
+        "quote": "Be careful the environment you choose for it will shape you; be careful the friends you choose for you will become like them.",
+        "author": "W. Clement Stone",
+        "authorBio": "1902-2002, Businessman and Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "4-20-2021"
+    },
+    {
+        "id": "1b55a2c0-a517-11eb-8dc9-a1225b571907",
+        "quote": "The picture that we have of ourselves - will always determine how we respond to life.",
+        "author": "Miles Munroe",
+        "authorBio": "1954-2014, Minister",
+        "tags": [
+            "Motivation",
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "4-24-2021"
+    },
+    {
+        "id": "abcd5e80-a5ec-11eb-a492-a7646f7479a8",
+        "quote": "Too often we enjoy the comfort of opinion without the discomfort of thought.",
+        "author": "Robert Kennedy",
+        "authorBio": "1925-1968, Politician and Lawyer",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "4-25-2021"
+    },
+    {
+        "id": "d5086b20-e7f3-11eb-aeeb-8d9fc849f4f6",
+        "quote": "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
+        "author": "Unknown",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-18-2021"
+    },
+    {
+        "id": "8bc33dc0-eae9-11eb-856f-ff742cbeba2c",
+        "quote": "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
+        "author": "Unknown",
+        "tags": [
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "7-22-2021"
+    },
+    {
+        "id": "b05f6110-0694-11ec-a0f1-bb182559b8b9",
+        "quote": "The same boiling water that softens the potato hardens the egg. It’s what you’re made of. Not the circumstances.",
+        "author": "Unknown",
+        "tags": [
+            "Truth",
+            "Mind",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "8-26-2021"
+    },
+    {
+        "id": "ed45b2e0-0bef-11ec-938e-3fe14b3bcbc5",
+        "quote": "If you believe it’ll work out, you’ll see opportunities. If you don’t believe it’ll work out, you’ll see obstacles.",
+        "author": "Wayne Dyer",
+        "authorBio": "1940-2015 - Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "9-2-2021"
+    },
+    {
+        "id": "b5bd5a60-14e3-11ec-b743-177a4faa3547",
+        "quote": "It is the mark of an educated mind to be able to entertain a thought without accepting it",
+        "author": "Aristotle",
+        "authorBio": "384BC-322BC - Greek Philosopher",
+        "tags": [
+            "Truth",
+            "Knowledge"
+        ],
+        "rating": 5,
+        "createDate": "9-13-2021"
+    },
+    {
+        "id": "63cd1090-1959-11ec-9272-67a4df95f1b3",
+        "quote": "Inaction breeds doubt and fear. Action breeds confidence and courage. If you want to conquer the negative elements in your life, don’t sit at home and think about it. Go out and get busy!",
+        "author": "Dale Carnegie",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 5,
+        "createDate": "9-19-2021"
+    },
+    {
+        "id": "5fc21950-415e-11ec-94cf-637b0ad8e955",
+        "quote": "All that you could ever desire is already present and only waits to be matched by your beliefs.",
+        "author": "Neville Goddard",
+        "authorBio": "1905-1972 - Author-Influential Teacher",
+        "tags": [
+            "Motivation",
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "11-9-2021"
+    },
+    {
+        "id": "1b029210-457b-11ec-b0eb-e5391a7e19f5",
+        "quote": "The primary cause of unhappiness is never the situation but your thoughts about it. Be aware of the thoughts you are thinking.",
+        "author": "Eckhart Tolle",
+        "authorBio": "Author",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "11-14-2021"
+    },
+    {
+        "id": "e80c9370-4fa1-11ec-abeb-2f2a0e3dc8d1",
+        "quote": "Challenges are what make life interesting and overcoming them is what makes life meaningful.",
+        "author": "Joshua J. Marine",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "11-27-2021"
+    },
+    {
+        "id": "78265ff0-58f7-11ec-8cdc-2de4f0fd6ad5",
+        "quote": "When we strive to become better than we are, everything around us becomes better too.",
+        "author": "Paulo Coelho",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "12-9-2021"
+    },
+    {
+        "id": "7b4347a0-5b79-11ec-8b73-913121de86a0",
+        "quote": "The common denominator of success is in forming the habit of doing the things that failures don't like to do.",
+        "author": "Albert E.N. Gray",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation",
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "12-12-2021"
+    },
+    {
+        "id": "f5921840-6279-11ec-9da1-195935c4026e",
+        "quote": "You'll never change your life until you change something you do daily. The secret of your success is found in your daily routine.",
+        "author": "John C. Maxwell",
+        "authorBio": "American Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "12-21-2021"
+    },
+    {
+        "id": "8e37dbc0-6923-11ec-b0c8-ef09b1fd454a",
+        "quote": "A person's fortune has its form given to it by his habits.",
+        "author": "Anonymous",
+        "tags": [
+            "Knowledge",
+            "Truth"
+        ],
+        "rating": 5,
+        "createDate": "12-29-2021"
+    },
+    {
+        "id": "375229d0-6dc1-11ec-b467-1516c3cb1ae6",
+        "quote": "Dripping water hollows out stone, not through force but through persistence.",
+        "author": "Ovid",
+        "authorBio": "Roman Poet",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "1-4-2022"
+    },
+    {
+        "id": "82025850-6f3e-11ec-93af-59f8f36e61ab",
+        "quote": "I am not a product of my circumstances I am a product of my decisions.",
+        "author": "Stephen Covey",
+        "authorBio": "1932-2012-Educator-Author-Businessman-Keynote Speaker",
+        "tags": [
+            "Truth",
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "1-6-2022"
+    },
+    {
+        "id": "0d743210-93e7-11ec-9f2b-1db9181b8313",
+        "quote": "Happiness is found in doing, not merely possessing.",
+        "author": "Napoleon Hill",
+        "authorBio": "1883-1970 - American Writer",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "2-22-2022"
+    },
+    {
+        "id": "95f83360-9a82-11ec-ad5d-1f9129f2e8df",
+        "quote": "At the end of the day, we can endure much more than we think we can.",
+        "author": "Frida Kahlo",
+        "authorBio": "1907-1954 - Mexican Painter",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "3-2-2022"
+    },
+    {
+        "id": "55c664f0-b3c4-11ec-9e9c-bdebb641d2a9",
+        "quote": "You can, you should, and if you're brave enough to start, you will.",
+        "author": "Stephen King",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "4-3-2022"
+    },
+    {
+        "id": "631c3e40-b3c4-11ec-9e9c-bdebb641d2a9",
+        "quote": "Happiness is a quality of the soul ... not a function of one's material circumstances.",
+        "author": "Aristotle",
+        "authorBio": "384BC-322BC - Greek Philosopher",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "4-3-2022"
+    },
+    {
+        "id": "7dcf6af0-b3c4-11ec-9e9c-bdebb641d2a9",
+        "quote": "The chief cause of failure is substituting what you want most for what you want now.",
+        "author": "Zig Ziglar",
+        "authorBio": "1926-2012 - Author-Salesman",
+        "tags": [
+            "Motivation",
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "4-3-2022"
+    },
+    {
+        "id": "f0c937b0-bbe0-11ec-9d69-73bfd6c54805",
+        "quote": "The rung of a ladder was never meant to rest upon, but only to hold a man's foot long enough to enable him to put the other somewhat higher.",
+        "author": "Thomas Huxley",
+        "authorBio": "1825-1895 - Biologist-Anthropologist",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "4-14-2022"
+    },
+    {
+        "id": "129ce4d0-c196-11ec-bb9b-85d92e29bf6c",
+        "quote": "The man who moves a mountain begins by carrying away small stones.",
+        "author": "Confucius",
+        "authorBio": "551 BC-479 BC - Chinese Philosopher",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "4-21-2022"
+    },
+    {
+        "id": "df188b60-c315-11ec-b1a0-470ee8649e79",
+        "quote": "Success only comes to those who dare to attempt.",
+        "author": "Mallika Tripathi",
+        "authorBio": "Poet-Writer",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "4-23-2022"
+    },
+    {
+        "id": "96b2d6d0-cb14-11ec-8fc4-c9259f31fe5b",
+        "quote": "The best protection against inflation is still your own personal earnings power. The best investment by far is anything that develops yourself.",
+        "author": "Warren Buffett",
+        "authorBio": "Investor - Speaker - Philanthropist",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "5-3-2022"
+    },
+    {
+        "id": "1f8bc760-d6bd-11ec-9d8a-21cf520b281a",
+        "quote": "We learn wisdom from failure much more than from success.",
+        "author": "Samuel Smiles",
+        "authorBio": "1812-1904 - Author",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "5-18-2022"
+    },
+    {
+        "id": "fce98140-e1be-11ec-9530-1b8f355832f1",
+        "quote": "Enjoy the little things, for one day you may look back and realize they were the big ones",
+        "author": "Robert Breault ",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "6-1-2022"
+    },
+    {
+        "id": "f5bfe500-efd1-11ec-bb78-75a4d94babff",
+        "quote": "In our lives, change is unavoidable, loss is unavoidable. In the adaptability and ease with which we experience change, lies our happiness and freedom.",
+        "author": "Buddha",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "6-19-2022"
+    },
+    {
+        "id": "05720da0-f16e-11ec-8509-2f49d2a16da3",
+        "quote": "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.",
+        "author": "Buddha",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "6-21-2022"
+    },
+    {
+        "id": "35eb8e60-f8bd-11ec-84d2-cdbc1f8ff1ca",
+        "quote": "It's what you do in the present that will redeem the past and thereby change the future.",
+        "author": "Paulo Coelho",
+        "authorBio": "Author",
+        "tags": [
+            "Hope",
+            "Resilience",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "6-30-2022"
+    },
+    {
+        "id": "c8a96d60-f941-11ec-8fc2-31b64a8238c0",
+        "quote": "Plenty of people miss their share of happiness, not because they never found it, but because they didn't stop to enjoy it.",
+        "author": "William Feather",
+        "authorBio": "Author 1889-1981",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "7-1-2022"
+    },
+    {
+        "id": "cc731b70-faf5-11ec-a075-b707e0187aea",
+        "quote": "We tend to forget that happiness doesn't come as a result of getting something we don't have, but rather of recognizing and appreciating what we do have.",
+        "author": "Frederick Keonig",
+        "authorBio": "1774-1833 - Inventor",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "7-3-2022"
+    },
+    {
+        "id": "5e82fde0-0222-11ed-9d1f-15973e74ef18",
+        "quote": "The power for creating a better future is contained in the present moment: You create a good future by creating a good present.",
+        "author": "Eckhart Tolle",
+        "authorBio": "Author",
+        "tags": [
+            "Happiness",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "7-12-2022"
+    },
+    {
+        "id": "d18e7950-02a8-11ed-8243-656ecabec43b",
+        "quote": "The secret of getting ahead is getting started.",
+        "author": "Mark Twain",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "7-13-2022"
+    },
+    {
+        "id": "6d77a180-037f-11ed-87f6-4d32051615a6",
+        "quote": "What you do today can improve all your tomorrows.",
+        "author": "Ralph Marston",
+        "authorBio": "1907-1967 - American Soccer Player",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "7-14-2022"
+    },
+    {
+        "id": "882dd990-1595-11ed-9aeb-6fc2d127ac46",
+        "quote": "A year from now you will wish you had started today.",
+        "author": "Karen Lamb",
+        "tags": [
+            "Resilience",
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-6-2022"
+    },
+    {
+        "id": "548b5bd0-1a6d-11ed-bf98-9963317e2685",
+        "quote": "You gain strength, courage and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, ‘I have lived through this horror. I can take the next thing that comes along.’ … You must do the thing you think you cannot do.",
+        "author": "Eleanor Roosevelt",
+        "authorBio": "1884-1962 - American Political Figure-Former First Lady",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 0,
+        "createDate": "8-12-2022"
+    },
+    {
+        "id": "73c6bf80-1e2d-11ed-b7f9-4938ca5d58ac",
+        "quote": "They joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives.",
+        "author": "Russell M. Nelson",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "8-17-2022"
+    },
+    {
+        "id": "964014b0-1fbf-11ed-a77a-a33a27975ec3",
+        "quote": "Between stimulus and response, there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.",
+        "author": "Viktor Frankl ",
+        "authorBio": "1905-1997 - Psychiatrist-Author",
+        "tags": [
+            "Motivation",
+            "Hope"
+        ],
+        "rating": 0,
+        "createDate": "8-19-2022"
+    },
+    {
+        "id": "223ebf90-2473-11ed-bbc0-55872c82ce19",
+        "quote": "If you want the best the world has to offer, offer the world your best.",
+        "author": "Neale Donald Walsch",
+        "authorBio": "Author",
+        "tags": [
+            "Motivation",
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "8-25-2022"
+    },
+    {
+        "id": "a5abddf0-261b-11ed-a86e-0da7cc801a41",
+        "quote": "What you feed your mind, will lead your life.",
+        "author": "Kemi Sogunle",
+        "authorBio": "Author-Certified Life Coach",
+        "tags": [
+            "Mind",
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "8-27-2022"
+    },
+    {
+        "id": "919ec1d0-26ff-11ed-8e58-b3e319105136",
+        "quote": "Be stronger than your strongest excuse.",
+        "author": "Inky Johnson",
+        "authorBio": "Author-Motivational Speaker-Former Athlete",
+        "tags": [
+            "Motivation",
+            "Mind"
+        ],
+        "rating": 0,
+        "createDate": "8-28-2022"
+    },
+    {
+        "id": "309363c0-286f-11ed-8a90-0386a6fbb2d6",
+        "quote": "You can't change and be somebody else in the future unless you start becoming a little better at being that future person today.",
+        "author": "Richie Norton",
+        "authorBio": "Author-Entrepreneur",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "8-30-2022"
+    },
+    {
+        "id": "bbd9c0f0-2a4a-11ed-b872-e1d66f2934f5",
+        "quote": "The meaning of everything is the meaning I give it.",
+        "author": "Neale Donald Walsch",
+        "authorBio": "Author",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "9-1-2022"
+    },
+    {
+        "id": "e1919660-cbeb-11eb-959b-c128ff20b9a5",
+        "quote": "He had discovered a great law of human action...in order to make a man/woman covet a thing, it is only necessary to make the thing difficult to attain.\n",
+        "author": "Mark Twain",
+        "authorBio": "1835-1910 - Journalist-Lecturer-Novelist-Humorist",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 3,
+        "createDate": "6-12-2021"
+    },
+    {
+        "id": "64c867d0-2b8a-11ed-a028-b3886ffe7f17",
+        "quote": "The best time to plant a tree was 20 years ago. The second best time is now. ",
+        "author": "Chinese Proverb",
+        "tags": [
+            "Truth",
+            "Motivation",
+            "Hope",
+            "Lori"
+        ],
+        "rating": 5,
+        "createDate": "9-3-2022"
+    },
+    {
+        "id": "0e1f3c50-2b8b-11ed-a028-b3886ffe7f17",
+        "quote": "It's hard to beat a person who never gives up.",
+        "author": "Babe Ruth",
+        "tags": [
+            "Lori",
+            "Resilience",
+            "Motivation"
+        ],
+        "rating": 3,
+        "createDate": "9-3-2022"
+    },
+    {
+        "id": "6fd8b100-07c3-11e9-b3f0-2de171456aa6",
+        "quote": "People may hear your words, but they feel your attitude.",
+        "author": " John C. Maxwell",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 4,
+        "createDate": "12-24-2018"
+    },
+    {
+        "id": "3e985c10-bbe8-11e9-8cba-67a6514c2dbe",
+        "quote": "Always remember you are braver than you believe, stronger than you seem, and smarter than you think",
+        "author": "A. A. Milne",
+        "authorBio": "Author of Winnie the Pooh.",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "8-10-2019"
+    },
+    {
+        "id": "d7ac4e70-b02e-11eb-b97f-2f7798277f31",
+        "quote": "Happiness is a choice that requires effort at times.",
+        "author": "Aeschylus ",
+        "authorBio": "525-455 BC - Ancient Greek Author",
+        "tags": [
+            "Truth",
+            "Happiness"
+        ],
+        "rating": 0,
+        "createDate": "5-8-2021"
+    },
+    {
+        "id": "955cd150-2b8b-11ed-a028-b3886ffe7f17",
+        "quote": "If people are doubting how far you can go, go so far that you can't hear them anymore.",
+        "author": "Michele Ruiz",
+        "authorBio": "1965 - News anchor, entrepreneur, author, public speaker.",
+        "tags": [
+            "Motivation",
+            "Resilience",
+            "Lori"
+        ],
+        "rating": 4,
+        "createDate": "9-3-2022"
+    },
+    {
+        "id": "95a70bd0-2bae-11ed-a028-b3886ffe7f17",
+        "quote": "Today I will do what others won't, so tomorrow I can do what others can't.",
+        "author": "Jerry Rice",
+        "authorBio": "1962 - American former professional football wide receiver",
+        "tags": [
+            "Motivation",
+            "Lori"
+        ],
+        "rating": 5,
+        "createDate": "9-3-2022"
+    },
+    {
+        "id": "238f6d15-f6ec-498f-8df7-7e99dc090173",
+        "quote": "The man who moves a mountain begins by carrying away small stones.",
+        "author": "Confucius",
+        "authorBio": "551 BC-479 BC - Chinese Philosopher",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "9-6-2022"
+    },
+    {
+        "id": "b7cef488-f7ba-4c5d-932e-895903175791",
+        "quote": "The man who moves a mountain begins by carrying away small stones.",
+        "author": "Confucius",
+        "authorBio": "",
+        "tags": [
+            "Truth",
+            "Motivation"
+        ],
+        "rating": 5,
+        "createDate": "9-6-2022"
+    }
+]
