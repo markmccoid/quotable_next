@@ -5,7 +5,10 @@ import fs from "fs";
 // const fs = require("fs");
 
 // users in JSON file for simplicity, store in a db for production applications
-let quotes: QuoteRecord[] = require("../data/quotes.json");
+// let quotes: QuoteRecord[] = require("../data/quotes.json");
+import { quotes as fileQuotes } from "./quoteloader";
+
+let quotes = [...fileQuotes];
 
 export const quotesDB = {
   getAll: () => quotes,
@@ -31,7 +34,11 @@ function addNewQuote(quote: QuoteRecord) {
 
   // set date created and updated
   quote.createDate = new Date().toLocaleDateString().replaceAll("/", "-");
-  quote.tags = Array.isArray(quote.tags) ? quote.tags : quote.tags.split(",");
+  quote.authorBio = quote.authorBio.trim();
+  quote.author = quote.author.trim();
+  quote.tags = Array.isArray(quote.tags)
+    ? quote.tags
+    : quote.tags.split(",").map((el) => el.trim());
   // add and save quote
   quotes.push(quote);
   saveData();

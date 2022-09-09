@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import type { QuoteRecord } from "../types";
+import { Rating } from "@smastrom/react-rating";
 
 type Form = {
   quote: { value: string };
@@ -10,6 +11,8 @@ type Form = {
 };
 
 const addquote = () => {
+  const [ratingValue, setRatingValue] = useState(0); // <-- Init with 0 for no initial value
+
   const submitQuote = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     // type a var to use to pull form values
@@ -20,7 +23,7 @@ const addquote = () => {
       author: target.author.value,
       authorBio: target.authorBio.value,
       tags: target.tags.value,
-      rating: parseInt(target.rating.value),
+      rating: ratingValue,
     };
 
     const rawResponse = await fetch("api/quotes/addquote", {
@@ -105,11 +108,13 @@ const addquote = () => {
             >
               Rating
             </label>
-            <input
-              type="text"
-              name="rating"
-              id="rating"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+
+            <Rating
+              // style={{ maxWidth: 250 }}
+              transition="zoom"
+              className="max-w-[200px]"
+              value={ratingValue}
+              onChange={(selectedValue) => setRatingValue(selectedValue)}
             />
           </div>
         </div>

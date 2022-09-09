@@ -42,11 +42,12 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
     console.log("post done", content);
   };
   const updateQuote = async () => {
-    const idToUpdate = "c10e736b-809a-4860-b058-054bec6786ea";
+    const idToUpdate = "7c867e4e-4c37-4dc4-808b-b0268394e218";
     const updatedQuote = {
       id: idToUpdate,
       tags: ["Motive"],
-      quote: "Here I am",
+      quote: "Have patience. All things are difficult before they become easy.",
+      authorBio: "Here I am",
     };
 
     const rawResponse = await fetch("api/quotes/updatequote", {
@@ -63,9 +64,18 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
   };
 
   const getQuote = async () => {
-    const qId = "c10e736b-809a-4860-b058-054bec6786ea";
+    const qId = "7c867e4e-4c37-4dc4-808b-b0268394e218";
     const data = await fetch(`api/quotes/${qId}`).then((res) => res.json());
     console.log("data", data);
+  };
+
+  const search = async () => {
+    const data = await fetch(
+      `api/quotes/search?authortext=neal&quotetext=belief`
+    );
+    const quotes = await data.json();
+
+    console.log("data", data, quotes);
   };
 
   return (
@@ -95,6 +105,12 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
           onClick={getQuote}
         >
           Get Quote
+        </button>
+        <button
+          className="p-2 rounded-2xl border border-black bg-indigo-400"
+          onClick={search}
+        >
+          Search
         </button>
       </main>
     </div>

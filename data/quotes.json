@@ -2282,5 +2282,75 @@
         ],
         "rating": 5,
         "createDate": "9-6-2022"
+    },
+    {
+        "id": "072e6319-ddcc-4569-80a5-7ee9ead43544",
+        "quote": "Test",
+        "author": "test",
+        "authorBio": "test",
+        "tags": [
+            "test"
+        ],
+        "rating": 5,
+        "createDate": "9-7-2022"
+    },
+    {
+        "id": "440abce8-8ad5-444d-8ba7-2aba8e51db77",
+        "quote": "tst",
+        "author": "deea",
+        "authorBio": "dvde",
+        "tags": [
+            "tead",
+            " mead"
+        ],
+        "rating": 0,
+        "createDate": "9-7-2022"
+    },
+    {
+        "id": "d74cd8af-1900-44df-8eee-4d91ef53eab5",
+        "quote": "tst",
+        "author": "deea",
+        "authorBio": "dvde",
+        "tags": [
+            "tead",
+            "mead"
+        ],
+        "rating": 3,
+        "createDate": "9-7-2022"
+    },
+    {
+        "id": "1f0dea0e-ca1f-4ed4-adaa-97d821fc8ddc",
+        "quote": "Will this owkr",
+        "author": "deea",
+        "authorBio": "Test",
+        "tags": [
+            "Test"
+        ],
+        "rating": 0,
+        "createDate": "9-7-2022"
+    },
+    {
+        "id": "a400d7e6-b82d-4b77-87a2-9a96d2ac4636",
+        "quote": "Here I am",
+        "author": "deea",
+        "authorBio": "t",
+        "tags": [
+            "Motive"
+        ],
+        "rating": 3,
+        "createDate": "9-7-2022",
+        "updateDate": "9-8-2022"
+    },
+    {
+        "id": "7c867e4e-4c37-4dc4-808b-b0268394e218",
+        "quote": "Have patience. All things are difficult before they become easy.",
+        "author": "Saadi ",
+        "authorBio": "Here I am",
+        "tags": [
+            "Motive"
+        ],
+        "rating": 3,
+        "createDate": "9-8-2022",
+        "updateDate": "9-8-2022"
     }
 ]
