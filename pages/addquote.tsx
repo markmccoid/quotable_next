@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import type { QuoteRecord } from "../types";
 import { Rating } from "@smastrom/react-rating";
+import SearchInput from "../component/SearchInput";
 
 type Form = {
   quote: { value: string };
@@ -12,7 +13,8 @@ type Form = {
 
 const addquote = () => {
   const [ratingValue, setRatingValue] = useState(0); // <-- Init with 0 for no initial value
-
+  const [author, setAuthor] = useState("");
+  //! -------SUBMIT QUOTE --------------------------
   const submitQuote = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     // type a var to use to pull form values
@@ -37,6 +39,7 @@ const addquote = () => {
     const content = await rawResponse.json();
     console.log("add quote", content);
   };
+  //! -------END SUBMIT QUOTE --------------------------
 
   return (
     <form onSubmit={submitQuote}>
@@ -63,12 +66,31 @@ const addquote = () => {
             >
               Author
             </label>
-            <input
+            {/* <input
               type="text"
               name="author"
               id="author"
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            />
+            /> */}
+            <SearchInput
+              searchArray={["mark", "lori", "haley", "hunter"].map(
+                (author) => author
+              )}
+              updateFunction={(e) => setAuthor(e)}
+            >
+              {(props) => {
+                return (
+                  <input
+                    {...props}
+                    type="text"
+                    name="author"
+                    id="author"
+                    // value={author}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  />
+                );
+              }}
+            </SearchInput>
           </div>
 
           <div className="col-span-6 sm:col-span-6">

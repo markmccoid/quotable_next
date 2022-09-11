@@ -25,7 +25,10 @@ export const quoteSearch = {
 type PrimarySearch = {
   quoteText?: string | undefined;
   authorText?: string | undefined;
-  rating?: number | undefined;
+  // could be a single tag or tags delimited by commas
+  tags?: string | undefined;
+  // could be a single rating or ratings delimited by commas
+  rating?: string | undefined;
 };
 
 /**
@@ -35,21 +38,44 @@ type PrimarySearch = {
  * @param param0
  * @returns
  */
-function primarySearch({ quoteText, authorText, rating }: PrimarySearch) {
+function primarySearch({ quoteText, authorText, tags, rating }: PrimarySearch) {
   let matchingIds: string[] = [];
   // Loop through the quotes checking each passed search criteria
   // building up a final list of quotes meeting criteria
+  //! MAIN Search Loop
   for (const quoteRec of quotesToSearch) {
     // create bool and if undefined search text, then default to true as undefined shouldn't exclude quote
+    //-- Quote Text
     const quoteBool = quoteText
       ? quoteRec.quote.includes(quoteText?.toLowerCase())
       : true;
+    //-- Author Text
     const authorBool = authorText
       ? quoteRec.author.includes(authorText?.toLowerCase())
       : true;
 
-    // Should we include quote in results
-    if (quoteBool && authorBool) {
+    //-- Tag(s) filter
+    // 'Motivation,'Hope'
+    const tagArray = tags && tags?.split(",").map((el) => el.toLowerCase());
+
+    const quoteTags = Array.isArray(quoteRec.tags)
+      ? quoteRec.tags
+      : [quoteRec.tags];
+    const tagBool = tagArray
+      ? tagArray.some((el) =>
+          quoteTags.map((el) => el.toLowerCase()).includes(el)
+        )
+      : true;
+
+    //-- Rating
+    const ratingArray = rating && rating?.split(",");
+
+    const ratingBool = ratingArray
+      ? ratingArray.some((el) => el === quoteRec?.rating?.toString())
+      : true;
+
+    //-- FINAL What should we include quote in results
+    if (quoteBool && authorBool && tagBool && ratingBool) {
       matchingIds.push(quoteRec.id);
     }
   }
