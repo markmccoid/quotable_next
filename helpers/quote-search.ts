@@ -53,7 +53,7 @@ function primarySearch({ quoteText, authorText, tags, rating }: PrimarySearch) {
     const authorBool = authorText
       ? quoteRec.author.includes(authorText?.toLowerCase())
       : true;
-
+    console.log("authorBool", quoteRec.author, authorText?.toLowerCase());
     //-- Tag(s) filter
     // 'Motivation,'Hope'
     const tagArray = tags && tags?.split(",").map((el) => el.toLowerCase());

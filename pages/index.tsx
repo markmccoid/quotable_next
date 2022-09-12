@@ -70,12 +70,12 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
   };
 
   const search = async () => {
-    const data = await fetch(`api/quotes/search?rating=3,5&tags=lori`);
+    const data = await fetch(`api/quotes/search?authorText=Tom`);
     const quotes = await data.json();
 
     console.log(
       "data",
-      quotes.matchingQuotes.map((el) => `${el.rating}=${el.tags}`)
+      quotes.map((el) => `${el.rating}=${el.tags}`)
     );
   };
 

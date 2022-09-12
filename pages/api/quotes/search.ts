@@ -5,7 +5,7 @@ import type { QuoteRecord } from "../../../types";
 
 export default async function search(
   req: NextApiRequest,
-  res: NextApiResponse<{ matchingQuotes: QuoteRecord[] }>
+  res: NextApiResponse<QuoteRecord[]>
 ) {
   const { quotetext, authortext, tags, rating } = req.query;
 
@@ -16,5 +16,5 @@ export default async function search(
     tags: Array.isArray(tags) ? tags.join(",") : tags,
     rating: Array.isArray(rating) ? rating.join(",") : rating?.toString(),
   });
-  return res.status(200).json({ matchingQuotes });
+  return res.status(200).json(matchingQuotes);
 }
