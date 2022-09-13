@@ -2352,5 +2352,27 @@
         "rating": 3,
         "createDate": "9-8-2022",
         "updateDate": "9-8-2022"
+    },
+    {
+        "id": "7367da2d-30ce-4e8e-86f7-ae5763f106e1",
+        "quote": "Test",
+        "author": "Tom Stoppard",
+        "authorBio": "tete",
+        "tags": [
+            "what"
+        ],
+        "rating": 4,
+        "createDate": "9-12-2022"
+    },
+    {
+        "id": "be207a10-6483-4155-b778-6b2bfe11a96d",
+        "quote": "test",
+        "author": "Albert Camus",
+        "authorBio": "1913-1960 - Author - Journalist",
+        "tags": [
+            "Motivate"
+        ],
+        "rating": 3,
+        "createDate": "9-12-2022"
     }
 ]

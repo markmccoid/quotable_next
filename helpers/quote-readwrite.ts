@@ -9,11 +9,13 @@ import fs from "fs";
 import { quotes as fileQuotes } from "./quoteloader";
 
 let quotes = [...fileQuotes];
-let authorsList = Array.from(new Set(quotes.map((el) => el.author)));
+const authorsList = Array.from(new Set(quotes.map((el) => el.author)));
+const tagsList = Array.from(new Set(quotes.map((el) => el.tags).flat()));
 
 export const quotesDB = {
   getAll: () => quotes,
   authorsList,
+  tagsList,
   getById: (id: string) => quotes.find((quote) => quote.id === id),
   // find: (quote: QuoteRecord) => quotes.find(quote),
   addNewQuote,
