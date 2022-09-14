@@ -2374,5 +2374,219 @@
         ],
         "rating": 3,
         "createDate": "9-12-2022"
+    },
+    {
+        "id": "534885b0-18f3-4021-8e87-d63b67ae65cc",
+        "quote": "Expect great things, and great things will come",
+        "author": "Norman Vincent Peale",
+        "authorBio": "Dude",
+        "tags": [
+            "Motivation",
+            "Peace"
+        ],
+        "rating": 2,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "a759a366-6bdb-4e9c-9d72-fa368839c791",
+        "quote": "Expect great things, and great things will come",
+        "author": "test 1 2 3",
+        "authorBio": "aer",
+        "tags": [
+            "Happiness"
+        ],
+        "rating": 5,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "2d169dcf-672b-44e5-ac08-f6a6b85a7788",
+        "quote": "adfadsjk;l",
+        "author": "J.M. Power",
+        "authorBio": "",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 4,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "8155d0ff-f6e9-40c8-a291-95dda4e2726d",
+        "quote": "te",
+        "author": "test",
+        "authorBio": "test",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 2,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "88cf6c57-6bbc-4d7c-99f2-9bd611bb4b33",
+        "quote": "Light and Shadows",
+        "author": "Piano",
+        "authorBio": "none",
+        "tags": [
+            "Leadership"
+        ],
+        "rating": 4,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "296744c7-2577-4613-b4c3-7dbcb2e8ec48",
+        "quote": "test",
+        "author": "test",
+        "authorBio": "testdddd",
+        "tags": [
+            "Knowledge"
+        ],
+        "rating": 4,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "e7b19135-96b1-4635-a6dc-91f83a686b8f",
+        "quote": "t",
+        "author": "Tom Stoppard",
+        "authorBio": "t",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 2,
+        "createDate": "9-13-2022"
+    },
+    {
+        "id": "0ced3da8-35eb-41f1-958c-a373765fa442",
+        "quote": "",
+        "author": "",
+        "authorBio": "",
+        "tags": [
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "881c0d1b-0d82-4cab-9ad1-ac3c985f4d77",
+        "quote": "",
+        "author": "",
+        "authorBio": "",
+        "tags": [
+            "Truth"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "ee481947-bed7-4215-ab64-72522a374972",
+        "quote": "",
+        "author": "",
+        "authorBio": "",
+        "tags": [
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "51b33457-3a04-4c73-a463-971d8987c69d",
+        "quote": "Test",
+        "author": "test",
+        "authorBio": "test",
+        "tags": [
+            "Hope",
+            "Resilience"
+        ],
+        "rating": 4,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "47c86284-d5c4-4120-8317-eaafa96109fb",
+        "quote": "",
+        "author": "Sad",
+        "authorBio": "f",
+        "tags": [
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "7ce24ac5-6b7c-408f-866d-b53c2e1c87d0",
+        "quote": "",
+        "author": "",
+        "authorBio": "sadf",
+        "tags": [],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "d907f5d6-a7d1-4bb7-a8d5-c82abfab3ef5",
+        "quote": "",
+        "author": "Fd",
+        "authorBio": "",
+        "tags": [],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "7ed1b139-8a3e-4c41-8678-f8d95ec414b7",
+        "quote": "test",
+        "author": "Tom Stoppard",
+        "authorBio": "df",
+        "tags": [
+            "Resilience"
+        ],
+        "rating": 3,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "a0b10dde-3010-4d3a-9866-c2aaa2f4a250",
+        "quote": "",
+        "author": "Tom Stoppard",
+        "authorBio": "",
+        "tags": [],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "64ef3434-99d6-4bdd-be02-7edcc9fd0bf6",
+        "quote": "test",
+        "author": "Torker",
+        "authorBio": "mbi",
+        "tags": [
+            "Motivation"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "2ed34930-e0d2-4072-b826-531c56619de4",
+        "quote": "Big brain",
+        "author": "Albert Einstein",
+        "authorBio": "Theoretical physicist",
+        "tags": [],
+        "rating": 5,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "17b7dcb9-6cf5-497d-b857-d5dd2cc20a5f",
+        "quote": "test",
+        "author": "test",
+        "authorBio": "test",
+        "tags": [
+            "Leadership"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
+    },
+    {
+        "id": "828829a0-f5a9-4088-905f-6f3a6fd00d6b",
+        "quote": "test",
+        "author": "test",
+        "authorBio": "test",
+        "tags": [
+            "test"
+        ],
+        "rating": 0,
+        "createDate": "9-14-2022"
     }
 ]

@@ -32,18 +32,20 @@ type RenderProps = {
   onChange: (e: any) => void;
 };
 type Props = {
+  initialVal?: string;
   searchArray: string[];
   searchOn?: boolean;
   updateFunction: (e) => void;
   children: (props: RenderProps) => JSX.Element;
 };
 const SearchInput: React.FC<Props> = ({
+  initialVal = "",
   searchArray = [],
   searchOn = true,
   updateFunction,
   children,
 }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(initialVal);
   const [backspace, setBackspace] = useState(false);
   const [escKey, setEscKey] = useState(false);
   const [startPos, setStartPos] = useState(0);
@@ -129,7 +131,7 @@ const SearchInput: React.FC<Props> = ({
 
   return children({
     ref: inputEl,
-    value: inputValue,
+    // value: inputValue,
     onKeyDown: onKeyDown,
     onChange: onInputChange,
   });
