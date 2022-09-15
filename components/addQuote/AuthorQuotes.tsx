@@ -27,14 +27,21 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
   }, [currAuthor]);
 
   return (
-    <div>
-      AuthorQuotes
-      <div>{currAuthor}</div>
-      {currQuotes.map((q) => (
-        <div key={q.id} className="py-2 border-2 border-red-800">
-          {q.quote}
-        </div>
-      ))}
+    <div className="mx-4 flex flex-col">
+      <div className="text-lg font-bold">
+        {`${currAuthor ? "Quotes from " + currAuthor : ""}`}
+      </div>
+      <div className="flex-column ">
+        {currQuotes.map((q) => {
+          return (
+            // <div key={q.id}>
+            <div key={q.id} className="m-2 p-2 border border-black">
+              {q.quote}
+            </div>
+            // </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

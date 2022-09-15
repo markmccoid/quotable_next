@@ -113,6 +113,25 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
         >
           Search
         </button>
+        <div className="my-4 flex flex-col">
+          <div className="border border-black p-2 my-2">
+            <button className="px-4 border-2 border-red-900">Hi</button>
+          </div>
+          <div className="text-2xl font-bold">curr</div>
+          <div className="border-2 border-red-900 p-2 my-2">
+            <div className="flex-column ">
+              {["a", "b", "c"].map((q) => {
+                return (
+                  // <div key={q.id}>
+                  <div key={q} className="m-2 p-2 border border-black">
+                    {q}
+                  </div>
+                  // </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
@@ -124,7 +143,6 @@ export async function getServerSideProps(context) {
   const data = await fetch(`${server}/api/quotes/randomquote`).then((res) =>
     res.json()
   );
-  console.log("data", data);
   return {
     props: { ...data }, // will be passed to the page component as props
   };

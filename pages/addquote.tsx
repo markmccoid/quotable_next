@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import type { QuoteRecord } from "../types";
 import { Rating } from "@smastrom/react-rating";
-import SearchInput from "../component/SearchInput";
-import AuthorQuotes from "../component/addQuote/AuthorQuotes";
+import SearchInput from "../components/SearchInput";
+import AuthorQuotes from "../components/addQuote/AuthorQuotes";
 import { useQuery } from "@tanstack/react-query";
 import CreatableSelect, { CommonProps, GroupBase } from "react-select";
 import Creatable from "react-select/creatable";
@@ -211,9 +211,8 @@ const addquote = () => {
           </button>
         </div>
       </form>
-      <div className="border-2 border-red-900">
-        <AuthorQuotes currAuthor={foundAuthor} updateBio={setBio} />
-      </div>
+
+      <AuthorQuotes currAuthor={foundAuthor} updateBio={setBio} />
     </div>
   );
 };
