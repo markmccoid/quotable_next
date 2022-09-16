@@ -2352,5 +2352,17 @@
         "rating": 3,
         "createDate": "9-8-2022",
         "updateDate": "9-8-2022"
+    },
+    {
+        "id": "fdceca54-e746-4c41-8f28-1664603917aa",
+        "quote": "Give light, and the darkness will disappear of itself.",
+        "author": "Desiderius Erasmus",
+        "authorBio": "1466-1536 - Theologian",
+        "tags": [
+            "Motivation",
+            "Resilience"
+        ],
+        "rating": 2,
+        "createDate": "9-15-2022"
     }
 ]

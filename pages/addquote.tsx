@@ -4,8 +4,9 @@ import { Rating } from "@smastrom/react-rating";
 import SearchInput from "../components/SearchInput";
 import AuthorQuotes from "../components/addQuote/AuthorQuotes";
 import { useQuery } from "@tanstack/react-query";
-import CreatableSelect, { CommonProps, GroupBase } from "react-select";
+import { CommonProps, GroupBase } from "react-select";
 import Creatable from "react-select/creatable";
+import { useRouter } from "next/router";
 
 type Form = {
   quote: { value: string };
@@ -49,6 +50,7 @@ const addquote = () => {
     ["tagsList"],
     getTags
   );
+  const router = useRouter();
 
   React.useEffect(() => {
     if (tagsArray) {
@@ -97,28 +99,37 @@ const addquote = () => {
   //! -------END SUBMIT QUOTE --------------------------
 
   return (
-    <div>
+    <div
+      className="bg-indigo-300 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
+                    mt-8 rounded-lg border border-indigo-600"
+    >
+      <button
+        onClick={() => router.push("/")}
+        className="border border-black py-1 px-2 ml-2 mt-2 bg-indigo-800 text-white rounded-lg"
+      >
+        Home
+      </button>
       <form onSubmit={submitQuote}>
-        <div className="bg-indigo-300 px-4 py-5 sm:p-6">
+        <div className=" px-4 py-5 sm:p-6">
           <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-6">
               <label
                 htmlFor="quote"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md font-medium text-gray-700"
               >
                 Quote
               </label>
               <textarea
                 name="quote"
                 id="quote"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
               />
             </div>
             {/* Use the component instead */}
             <div className="col-span-6 sm:col-span-6">
               <label
                 htmlFor="author"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md font-medium text-gray-700"
               >
                 Author
               </label>
@@ -141,7 +152,7 @@ const addquote = () => {
                       name="author"
                       id="author"
                       value={author}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
                     />
                   );
                 }}
@@ -150,7 +161,7 @@ const addquote = () => {
             <div className="col-span-6 sm:col-span-6">
               <label
                 htmlFor="authorBio"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md font-medium text-gray-700"
               >
                 Author Bio
               </label>
@@ -160,13 +171,13 @@ const addquote = () => {
                 id="authorBio"
                 value={bio}
                 onChange={(e) => setBio(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
                 htmlFor="tags"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md font-medium text-gray-700"
               >
                 Tags
               </label>
@@ -174,7 +185,7 @@ const addquote = () => {
                 type="text"
                 name="tags"
                 id="tags"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
               /> */}
               <Creatable
                 ref={selectRef}
@@ -188,7 +199,7 @@ const addquote = () => {
             <div className="col-span-6 sm:col-span-3 lg:col-span-3">
               <label
                 htmlFor="rating"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md font-medium text-gray-700"
               >
                 Rating
               </label>
@@ -202,16 +213,15 @@ const addquote = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+        <div className="bg-indigo-50 px-4 py-3 text-right sm:px-6">
           <button
             type="submit"
-            className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             Save
           </button>
         </div>
       </form>
-
       <AuthorQuotes currAuthor={foundAuthor} updateBio={setBio} />
     </div>
   );
