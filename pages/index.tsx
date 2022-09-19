@@ -5,10 +5,19 @@ import { useEffect, useState } from "react";
 import { server } from "../config";
 import { QuoteRecord } from "../types";
 import { GrAdd } from "react-icons/gr";
+import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/router";
+
+import { useAuthorsQuotes, useFilterQuotes } from "../queries/queryHooks";
 
 const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
   const route = useRouter();
+  const { isLoading, data } = useAuthorsQuotes("Albert Einstein");
+  const { data: filterAuthor } = useFilterQuotes({
+    authorSearch: ["Albert Einstein", "Truman Capote"],
+  });
+  console.log("data", data);
+  console.log("filterAuthor", filterAuthor);
   // const [data, setData] = useState();
 
   // useEffect(() => {
@@ -80,22 +89,43 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-indigo-50">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        onClick={() => route.push("/addquote")}
-        className="border border-black p-2 rounded-2xl hover:scale-110"
-      >
-        <GrAdd size={25} className="hover:scale-110" />
+      <div className="flex flex-row justify-center w-full px-20 items-baseline space-x-5">
+        <div
+          onClick={() => route.push("/addquote")}
+          className="group border border-black bg-indigo-200 hover:bg-indigo-300 py-2 px-5 rounded-2xl hover:scale-110 
+          transition-all ease-in-out duration-500"
+        >
+          <GrAdd
+            size={25}
+            className="group-hover:scale-110 transition-all ease-in-out duration-500"
+          />
+        </div>
+        <h1 className="text-6xl ">Quotable</h1>
+        <div
+          onClick={() => route.push("/searchquotes")}
+          className="border border-black py-2 px-5 rounded-2xl hover:scale-110 bg-indigo-200 hover:bg-indigo-300
+          transition-all ease-in-out duration-500 "
+        >
+          <FaSearch
+            size={25}
+            className="group-hover:scale-110 transition-all ease-in-out duration-500"
+          />
+        </div>
       </div>
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-4xl">Quotable</h1>
-        <div>{randQuote.quote}</div>
-        <div> by {randQuote.author}</div>
-        <button
+      <main className="flex w-full flex-1 flex-col items-center justify-start px-20 text-center">
+        <div
+          className="mt-[150px] flex flex-col justify-center border-2 border-indigo-500 rounded-2xl p-10
+        bg-indigo-100"
+        >
+          <div className="text-4xl mb-5">{randQuote.quote}</div>
+          <div className="text-2xl"> by {randQuote.author}</div>
+        </div>
+        {/* <button
           className="p-2 rounded-2xl border border-black bg-indigo-400"
           onClick={updateQuote}
         >
@@ -112,7 +142,7 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
           onClick={search}
         >
           Search
-        </button>
+        </button> */}
       </main>
     </div>
   );
@@ -121,9 +151,9 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
 export default Home;
 
 export async function getServerSideProps(context) {
-  const data = await fetch(`${server}/api/quotes/randomquote`).then((res) =>
-    res.json()
-  );
+  const response = await fetch(`${server}/api/quotes/randomquote`);
+  const data = await response.json();
+
   return {
     props: { ...data }, // will be passed to the page component as props
   };

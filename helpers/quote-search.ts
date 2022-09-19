@@ -46,17 +46,28 @@ function primarySearch({ quoteText, authorText, tags, rating }: PrimarySearch) {
   for (const quoteRec of quotesToSearch) {
     // create bool and if undefined search text, then default to true as undefined shouldn't exclude quote
     //-- Quote Text
-    const quoteBool = quoteText ? quoteRec.quote.includes(quoteText?.toLowerCase()) : true;
+    const quoteBool = quoteText
+      ? quoteRec.quote.includes(quoteText?.toLowerCase())
+      : true;
     //-- Author Text
-    const authorBool = authorText ? quoteRec.author.includes(authorText?.toLowerCase()) : true;
+    // Handle multiple authors passed
+    const authorArray =
+      authorText && authorText?.split(",").map((el) => el.toLocaleLowerCase());
+    const authorBool = authorArray
+      ? authorArray?.some((el) => el === quoteRec.author)
+      : true;
 
     //-- Tag(s) filter
     // 'Motivation,'Hope'
     const tagArray = tags && tags?.split(",").map((el) => el.toLowerCase());
 
-    const quoteTags = Array.isArray(quoteRec.tags) ? quoteRec.tags : [quoteRec.tags];
+    const quoteTags = Array.isArray(quoteRec.tags)
+      ? quoteRec.tags
+      : [quoteRec.tags];
     const tagBool = tagArray
-      ? tagArray.some((el) => quoteTags.map((el) => el.toLowerCase()).includes(el))
+      ? tagArray.some((el) =>
+          quoteTags.map((el) => el.toLowerCase()).includes(el)
+        )
       : true;
 
     //-- Rating
@@ -73,7 +84,9 @@ function primarySearch({ quoteText, authorText, tags, rating }: PrimarySearch) {
   }
 
   // Get the matching quotes using the matchingIds var
-  return quotes.filter((quoteRecord) => matchingIds.some((el) => el === quoteRecord.id));
+  return quotes.filter((quoteRecord) =>
+    matchingIds.some((el) => el === quoteRecord.id)
+  );
 }
 
 /**
@@ -87,7 +100,9 @@ function byQuote(quoteText: string): QuoteRecord[] {
   const matchingQuotes = quotesToSearch.filter((quoteRecord) =>
     quoteRecord.quote.includes(quoteText.toLowerCase())
   );
-  return quotes.filter((quoteRecord) => matchingQuotes.some((el) => el.id === quoteRecord.id));
+  return quotes.filter((quoteRecord) =>
+    matchingQuotes.some((el) => el.id === quoteRecord.id)
+  );
 }
 /**
  * Search "byAuthor"
@@ -100,5 +115,7 @@ function byAuthor(authorText: string): QuoteRecord[] {
   const matchingQuotes = quotesToSearch.filter((quoteRecord) =>
     quoteRecord.author.includes(authorText.toLowerCase())
   );
-  return quotes.filter((quoteRecord) => matchingQuotes.some((el) => el.id === quoteRecord.id));
+  return quotes.filter((quoteRecord) =>
+    matchingQuotes.some((el) => el.id === quoteRecord.id)
+  );
 }

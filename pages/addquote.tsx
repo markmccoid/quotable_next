@@ -57,7 +57,7 @@ const addquote = () => {
       setTagOptions(formatTags(tagsArray));
     }
   }, [tagsArray]);
-  console.log("TAGS Sele", tagsSelected);
+
   //! -------SUBMIT QUOTE --------------------------
   const submitQuote = async (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -99,130 +99,133 @@ const addquote = () => {
   //! -------END SUBMIT QUOTE --------------------------
 
   return (
-    <div
-      className="bg-indigo-300 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
+    <div className="flex min-h-screen flex-col py-2 bg-indigo-50">
+      <div
+        className="bg-indigo-300 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
                     mt-8 rounded-lg border border-indigo-600"
-    >
-      <button
-        onClick={() => router.push("/")}
-        className="border border-black py-1 px-2 ml-2 mt-2 bg-indigo-800 text-white rounded-lg"
       >
-        Home
-      </button>
-      <form onSubmit={submitQuote}>
-        <div className=" px-4 py-5 sm:p-6">
-          <div className="grid grid-cols-6 gap-6">
-            <div className="col-span-6 sm:col-span-6">
-              <label
-                htmlFor="quote"
-                className="block text-md font-medium text-gray-700"
-              >
-                Quote
-              </label>
-              <textarea
-                name="quote"
-                id="quote"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
-              />
-            </div>
-            {/* Use the component instead */}
-            <div className="col-span-6 sm:col-span-6">
-              <label
-                htmlFor="author"
-                className="block text-md font-medium text-gray-700"
-              >
-                Author
-              </label>
-              <SearchInput
-                searchArray={authorArray}
-                updateFunction={(e) => {
-                  setAuthor(e);
-                  if (authorArray.filter((el) => el === e).length > 0) {
-                    setFoundAuthor(e);
-                  } else {
-                    setFoundAuthor("");
-                  }
-                }}
-              >
-                {(props) => {
-                  return (
-                    <input
-                      {...props}
-                      type="text"
-                      name="author"
-                      id="author"
-                      value={author}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
-                    />
-                  );
-                }}
-              </SearchInput>
-            </div>
-            <div className="col-span-6 sm:col-span-6">
-              <label
-                htmlFor="authorBio"
-                className="block text-md font-medium text-gray-700"
-              >
-                Author Bio
-              </label>
-              <input
-                type="text"
-                name="authorBio"
-                id="authorBio"
-                value={bio}
-                onChange={(e) => setBio(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-3">
-              <label
-                htmlFor="tags"
-                className="block text-md font-medium text-gray-700"
-              >
-                Tags
-              </label>
-              {/* <input
+        <button
+          onClick={() => router.push("/")}
+          className="border border-black py-1 px-2 ml-2 mt-2 bg-indigo-800 text-white rounded-lg"
+        >
+          Home
+        </button>
+        <form onSubmit={submitQuote}>
+          <div className=" px-4 py-5 sm:p-6">
+            <div className="grid grid-cols-6 gap-6">
+              <div className="col-span-6 sm:col-span-6">
+                <label
+                  htmlFor="quote"
+                  className="block text-md font-medium text-gray-700"
+                >
+                  Quote
+                </label>
+                <textarea
+                  name="quote"
+                  id="quote"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
+                />
+              </div>
+              {/* Use the component instead */}
+              <div className="col-span-6 sm:col-span-6">
+                <label
+                  htmlFor="author"
+                  className="block text-md font-medium text-gray-700"
+                >
+                  Author
+                </label>
+                <SearchInput
+                  searchArray={authorArray}
+                  updateFunction={(e) => {
+                    setAuthor(e);
+                    if (authorArray.filter((el) => el === e).length > 0) {
+                      setFoundAuthor(e);
+                    } else {
+                      setFoundAuthor("");
+                    }
+                  }}
+                >
+                  {(props) => {
+                    return (
+                      <input
+                        {...props}
+                        type="text"
+                        name="author"
+                        id="author"
+                        value={author}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
+                      />
+                    );
+                  }}
+                </SearchInput>
+              </div>
+              <div className="col-span-6 sm:col-span-6">
+                <label
+                  htmlFor="authorBio"
+                  className="block text-md font-medium text-gray-700"
+                >
+                  Author Bio
+                </label>
+                <input
+                  type="text"
+                  name="authorBio"
+                  id="authorBio"
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="tags"
+                  className="block text-md font-medium text-gray-700"
+                >
+                  Tags
+                </label>
+                {/* <input
                 type="text"
                 name="tags"
                 id="tags"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md"
               /> */}
-              <Creatable
-                ref={selectRef}
-                instanceId="tag"
-                options={tagOptions}
-                isClearable
-                isMulti
-                onChange={(e) => setTagsSelected(e.map((el) => el.value))}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-3 lg:col-span-3">
-              <label
-                htmlFor="rating"
-                className="block text-md font-medium text-gray-700"
-              >
-                Rating
-              </label>
-              <Rating
-                // style={{ maxWidth: 250 }}
-                transition="zoom"
-                className="max-w-[200px]"
-                value={ratingValue}
-                onChange={(selectedValue) => setRatingValue(selectedValue)}
-              />
+                <Creatable
+                  ref={selectRef}
+                  instanceId="tag"
+                  options={tagOptions}
+                  isClearable
+                  isMulti
+                  onChange={(e) => setTagsSelected(e.map((el) => el.value))}
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-3 lg:col-span-3">
+                <label
+                  htmlFor="rating"
+                  className="block text-md font-medium text-gray-700"
+                >
+                  Rating
+                </label>
+                <Rating
+                  // style={{ maxWidth: 250 }}
+                  resetOnSecondClick
+                  transition="zoom"
+                  className="max-w-[200px]"
+                  value={ratingValue}
+                  onChange={(selectedValue) => setRatingValue(selectedValue)}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bg-indigo-50 px-4 py-3 text-right sm:px-6">
-          <button
-            type="submit"
-            className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            Save
-          </button>
-        </div>
-      </form>
-      <AuthorQuotes currAuthor={foundAuthor} updateBio={setBio} />
+          <div className="bg-indigo-300 px-4 py-3 text-right sm:px-6">
+            <button
+              type="submit"
+              className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+        <AuthorQuotes currAuthor={foundAuthor} updateBio={setBio} />
+      </div>
     </div>
   );
 };
