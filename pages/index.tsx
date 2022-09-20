@@ -8,16 +8,16 @@ import { GrAdd } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/router";
 
-import { useAuthorsQuotes, useFilterQuotes } from "../queries/queryHooks";
+import { useAuthorsQuotes, useSearchQuotes } from "../queries/queryHooks";
 
 const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
   const route = useRouter();
-  const { isLoading, data } = useAuthorsQuotes("Albert Einstein");
-  const { data: filterAuthor } = useFilterQuotes({
-    authorSearch: ["Albert Einstein", "Truman Capote"],
-  });
-  console.log("data", data);
-  console.log("filterAuthor", filterAuthor);
+  // const { isLoading, data } = useAuthorsQuotes("Albert Einstein");
+  // const { data: filterAuthor } = useSearchQuotes({
+  //   authorSearch: ["Albert Einstein", "Truman Capote"],
+  // });
+  // console.log("data", data);
+  // console.log("filterAuthor", filterAuthor);
   // const [data, setData] = useState();
 
   // useEffect(() => {

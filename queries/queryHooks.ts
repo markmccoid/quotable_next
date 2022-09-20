@@ -3,23 +3,29 @@ import { QueryFunctionContext, useQuery } from "@tanstack/react-query";
 import { queryKeys } from "../queries";
 import type { AuthorsKeys } from "./authorKeys";
 import type { QuotesKeys } from "./quotesKeys";
+import { QuoteRecord } from "../types";
+import _orderBy from "lodash/orderBy";
+import orderBy from "lodash/orderBy";
 
-type AuthorsQueryKey = AuthorsKeys["authorQuotes"];
+type AuthorsQueryKey = AuthorsKeys["_def"];
 
 const fetchAuthor = async (
   ctx: QueryFunctionContext<AuthorsQueryKey, string>
 ) => {
-  console.log("query key", ctx.queryKey);
-  const [, , authorName] = ctx.queryKey; // readonly ['todos', 'list', { filters }]
-
-  console.log("authorname", authorName);
-  const response = await fetch(`/api/quotes/search?authortext=${authorName}`);
+  const response = await fetch(`/api/quotes/get/authors`);
   return await response.json();
 };
 
 // Export Hook to get quotes for specific Author
-export function useAuthorsQuotes(authorName: string) {
-  return useQuery(queryKeys.authors.authorQuotes(authorName), fetchAuthor);
+type AuthorListFormat = "raw" | "select";
+
+export function useAuthorsList(format: AuthorListFormat) {
+  const { data } = useQuery(queryKeys.authors._def, fetchAuthor);
+  const orderedData = orderBy(data);
+  if (format === "raw") return orderedData;
+  if (format === "select") {
+    return orderedData.map((el: string) => ({ label: el, value: el }));
+  }
 }
 
 //----------------------------
@@ -27,9 +33,9 @@ export function useAuthorsQuotes(authorName: string) {
 //----------------------------
 type QuotesFilterQueryKey = QuotesKeys["filter"];
 
-const filterQuotes = async (
+const searchQuotes = async (
   ctx: QueryFunctionContext<QuotesFilterQueryKey, SearchState>
-) => {
+): Promise<QuoteRecord[]> => {
   const [, , filter] = ctx.queryKey;
   // const queryParams = buildQuery({
   //   query: "authortext",
@@ -39,10 +45,9 @@ const filterQuotes = async (
   filter.authorSearch &&
     queryParamsBuild.push(`authortext=${filter.authorSearch}`);
   filter.quoteSearch &&
-    queryParamsBuild.push(`authortext=${filter.quoteSearch}`);
-  filter.ratingSearch &&
-    queryParamsBuild.push(`authortext=${filter.ratingSearch}`);
-  filter.tagSearch && queryParamsBuild.push(`authortext=${filter.tagSearch}`);
+    queryParamsBuild.push(`quotetext=${filter.quoteSearch}`);
+  filter.ratingSearch && queryParamsBuild.push(`rating=${filter.ratingSearch}`);
+  filter.tagSearch && queryParamsBuild.push(`tags=${filter.tagSearch}`);
 
   const queryParams = queryParamsBuild.join("&");
   console.log("query parms", queryParams);
@@ -51,8 +56,8 @@ const filterQuotes = async (
   return await response.json();
 };
 
-export function useFilterQuotes(filter: SearchState) {
-  return useQuery(queryKeys.quotesKeys.filter(filter), filterQuotes);
+export function useSearchQuotes(filter: SearchState) {
+  return useQuery(queryKeys.quotesKeys.filter(filter), searchQuotes);
 }
 
 function buildQuery({ query, value }: { query: string; value: any }) {}

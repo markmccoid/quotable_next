@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import SearchQuoteComponents from "../components/viewQuotes/SearchQuoteComponents";
 import SearchQuoteResults from "../components/viewQuotes/SearchQuoteResults";
+import { useSearchQuotes } from "../queries/queryHooks";
 
 export type SearchState = {
   quoteSearch?: string | undefined;
@@ -41,16 +42,8 @@ const reducer = (state: SearchState, action: Actions) => {
 };
 const Searchquotes = () => {
   const [searchState, dispatch] = useReducer(reducer, initialState);
+  const { data } = useSearchQuotes(searchState);
   return (
-    // <div className="flex min-h-screen flex-grow-0 flex-col py-2 bg-indigo-50">
-    //   <div
-    //     className="bg-indigo-300  w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
-    //                 mt-8 rounded-lg border border-indigo-600"
-    //   >
-    //     Search Quotes
-    //   </div>
-    //   <div>Results</div>
-    // </div>
     <div className="flex flex-col min-h-screen py-2 bg-indigo-50">
       <div
         className="bg-indigo-300 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border border-indigo-600 rounded-md
@@ -65,7 +58,7 @@ const Searchquotes = () => {
         className="bg-indigo-300 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border border-indigo-600 rounded-md
       md:mx-auto py-2 px-3"
       >
-        <SearchQuoteResults />
+        <SearchQuoteResults data={data} />
       </div>
     </div>
   );

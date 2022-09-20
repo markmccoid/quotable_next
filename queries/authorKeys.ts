@@ -3,8 +3,6 @@ import {
   inferQueryKeys,
 } from "@lukemorales/query-key-factory";
 
-export const authorsKey = createQueryKeys("authors", {
-  authorQuotes: (authorName: string) => authorName,
-});
+export const authorsKey = createQueryKeys("authors");
 
 export type AuthorsKeys = inferQueryKeys<typeof authorsKey>;
