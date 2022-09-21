@@ -83,6 +83,8 @@ function primarySearch({ quoteText, authorText, tags, rating }: PrimarySearch) {
     }
   }
 
+  // if nothing matched return undefined
+  if (matchingIds.length === 0) return undefined;
   // Get the matching quotes using the matchingIds var
   return quotes.filter((quoteRecord) =>
     matchingIds.some((el) => el === quoteRecord.id)

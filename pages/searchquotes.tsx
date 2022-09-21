@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import QuotableHeader from "../components/QuotableHeader";
 import SearchQuoteComponents from "../components/viewQuotes/SearchQuoteComponents";
 import SearchQuoteResults from "../components/viewQuotes/SearchQuoteResults";
 import { useSearchQuotes } from "../queries/queryHooks";
@@ -45,21 +46,35 @@ const Searchquotes = () => {
   const { data } = useSearchQuotes(searchState);
   return (
     <div className="flex flex-col min-h-screen py-2 bg-indigo-50">
+      <QuotableHeader />
       <div
-        className="bg-indigo-300 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border border-indigo-600 rounded-md
+        className="relative bg-indigo-100 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border-2 border-indigo-800 rounded-md
       md:mx-auto py-2 px-3"
       >
-        <p className="text-lg font-bold">Search Quotes</p>
-        <SearchQuoteComponents searchState={searchState} dispatch={dispatch} />
-        <div>searchState {searchState.quoteSearch}</div>
+        <div className="absolute top-[-25px] py-1 px-2 left-[-15px] rounded-md border border-indigo-800 bg-indigo-600">
+          <p className="text-lg font-bold text-white">Search Quotes</p>
+        </div>
+        <div className="mt-2">
+          <SearchQuoteComponents
+            searchState={searchState}
+            dispatch={dispatch}
+          />
+        </div>
       </div>
 
-      <div
-        className="bg-indigo-300 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border border-indigo-600 rounded-md
-      md:mx-auto py-2 px-3"
-      >
-        <SearchQuoteResults data={data} />
-      </div>
+      {data && (
+        <div
+          className="relative bg-indigo-100 mt-8 mx-4 md:w-[90%] lg:w-[75%] xl:w-[60%] border border-indigo-600 
+          rounded-md md:mx-auto py-2"
+        >
+          <div className="absolute top-[-25px] py-1 px-2 left-[-15px] rounded-md border border-indigo-800 bg-indigo-600">
+            <p className="text-lg font-bold text-white">Result Quotes</p>
+          </div>
+          <div className="mt-3 flex flex-row flex-wrap">
+            <SearchQuoteResults data={data} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

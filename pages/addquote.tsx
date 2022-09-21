@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { CommonProps, GroupBase } from "react-select";
 import Creatable from "react-select/creatable";
 import { useRouter } from "next/router";
+import QuotableHeader from "../components/QuotableHeader";
 
 type Form = {
   quote: { value: string };
@@ -100,16 +101,11 @@ const addquote = () => {
 
   return (
     <div className="flex min-h-screen flex-col py-2 bg-indigo-50">
+      <QuotableHeader />
       <div
-        className="bg-indigo-300 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
-                    mt-8 rounded-lg border border-indigo-600"
+        className="bg-indigo-100 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto
+                    mt-8 rounded-lg border-2 border-indigo-600"
       >
-        <button
-          onClick={() => router.push("/")}
-          className="border border-black py-1 px-2 ml-2 mt-2 bg-indigo-800 text-white rounded-lg"
-        >
-          Home
-        </button>
         <form onSubmit={submitQuote}>
           <div className=" px-4 py-5 sm:p-6">
             <div className="grid grid-cols-6 gap-6">
@@ -215,7 +211,7 @@ const addquote = () => {
               </div>
             </div>
           </div>
-          <div className="bg-indigo-300 px-4 py-3 text-right sm:px-6">
+          <div className="bg-indigo-100 px-4 py-3 text-right sm:px-6">
             <button
               type="submit"
               className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

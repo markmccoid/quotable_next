@@ -7,6 +7,9 @@ import { QuoteRecord } from "../types";
 import _orderBy from "lodash/orderBy";
 import orderBy from "lodash/orderBy";
 
+//----------------------------
+//-- Quote Authors Code
+//----------------------------
 type AuthorsQueryKey = AuthorsKeys["_def"];
 
 const fetchAuthor = async (
@@ -21,6 +24,28 @@ type AuthorListFormat = "raw" | "select";
 
 export function useAuthorsList(format: AuthorListFormat) {
   const { data } = useQuery(queryKeys.authors._def, fetchAuthor);
+  const orderedData = orderBy(data);
+  if (format === "raw") return orderedData;
+  if (format === "select") {
+    return orderedData.map((el: string) => ({ label: el, value: el }));
+  }
+}
+
+//----------------------------
+//-- Quote Tags Code
+//----------------------------
+type TagsQueryKey = ["taglist"];
+
+const fetchTags = async (ctx: QueryFunctionContext<TagsQueryKey, string>) => {
+  const response = await fetch(`/api/quotes/get/tags`);
+  return await response.json();
+};
+
+// Export Hook to get quotes for specific Author
+type TagListFormat = "raw" | "select";
+
+export function useTagsList(format: TagListFormat) {
+  const { data } = useQuery(["taglist"], fetchTags);
   const orderedData = orderBy(data);
   if (format === "raw") return orderedData;
   if (format === "select") {
