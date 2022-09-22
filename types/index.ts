@@ -4,7 +4,7 @@ export type QuoteRecord = {
   quote: string;
   authorBio: string;
   // an array of tags or a comma delimited string of tags
-  tags: string[] | string;
+  tags: string[];
   rating: number;
   createDate?: string;
   updateDate?: string;

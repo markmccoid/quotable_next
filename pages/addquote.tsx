@@ -66,9 +66,9 @@ const addquote = () => {
     const target = e.target as typeof e.target & Form;
     const newQuote: QuoteRecord = {
       id: "",
-      quote: target.quote.value,
-      author: target.author.value,
-      authorBio: target.authorBio.value,
+      quote: target.quote.value.trim(),
+      author: target.author.value.trim(),
+      authorBio: target.authorBio.value.trim(),
       tags: tagsSelected,
       rating: ratingValue,
     };
@@ -82,9 +82,8 @@ const addquote = () => {
       body: JSON.stringify({ newQuote }),
     });
     const content = await rawResponse;
-    console.log("content stat", content.status == 200);
+
     if (content.status == 200) {
-      console.log("in clear");
       //Reset Form data
       target.quote.value = "";
       setAuthor("");

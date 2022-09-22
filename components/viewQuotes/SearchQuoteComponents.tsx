@@ -38,7 +38,8 @@ const SearchQuoteComponents = ({ searchState, dispatch }: Props) => {
           </label>
           <div>
             <Select
-              // className="w-[350px]"
+              // className="z-100"
+
               options={authorsList}
               instanceId="authors"
               isMulti

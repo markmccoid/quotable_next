@@ -11,3 +11,29 @@
   
 
 }
+
+@layer base {
+  html {
+    @apply h-full
+  }
+
+  body {
+    @apply h-full bg-indigo-50 
+  }
+}
+
+#__next {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: indigo; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
