@@ -9,9 +9,17 @@ import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 import { useAuthorsQuotes, useSearchQuotes } from "../queries/queryHooks";
+import { useQuery } from "@tanstack/react-query";
 
-const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
+const getRandomQuote = async () => {
+  const response = await fetch(`/api/quotes/randomquote`);
+  const data = await response.json();
+  return data;
+};
+const Home: NextPage = () => {
   const route = useRouter();
+  const { isLoading, data } = useQuery(["randomquote"], getRandomQuote);
+
   // const { isLoading, data } = useAuthorsQuotes("Albert Einstein");
   // const { data: filterAuthor } = useSearchQuotes({
   //   authorSearch: ["Albert Einstein", "Truman Capote"],
@@ -88,6 +96,10 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
     );
   };
 
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-indigo-50">
       <Head>
@@ -122,27 +134,9 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
           className="mt-[150px] flex flex-col justify-center border-2 border-indigo-500 rounded-2xl p-10
         bg-indigo-100"
         >
-          <div className="text-4xl mb-5">{randQuote.quote}</div>
-          <div className="text-2xl"> by {randQuote.author}</div>
+          <div className="text-4xl mb-5">{data.randQuote.quote}</div>
+          <div className="text-2xl"> by {data.randQuote.author}</div>
         </div>
-        {/* <button
-          className="p-2 rounded-2xl border border-black bg-indigo-400"
-          onClick={updateQuote}
-        >
-          Update Quote
-        </button>
-        <button
-          className="p-2 rounded-2xl border border-black bg-indigo-400"
-          onClick={getQuote}
-        >
-          Get Quote
-        </button>
-        <button
-          className="p-2 rounded-2xl border border-black bg-indigo-400"
-          onClick={search}
-        >
-          Search
-        </button> */}
       </main>
     </div>
   );
@@ -150,11 +144,11 @@ const Home: NextPage<{ randQuote: QuoteRecord }> = ({ randQuote }) => {
 
 export default Home;
 
-export async function getServerSideProps(context) {
-  const response = await fetch(`${server}/api/quotes/randomquote`);
-  const data = await response.json();
+// export async function getServerSideProps(context) {
+//   const response = await fetch(`${server}/api/quotes/randomquote`);
+//   const data = await response.json();
 
-  return {
-    props: { ...data }, // will be passed to the page component as props
-  };
-}
+//   return {
+//     props: { ...data }, // will be passed to the page component as props
+//   };
+// }
