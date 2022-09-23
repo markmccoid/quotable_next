@@ -45,14 +45,14 @@ const Searchquotes = () => {
   const [searchState, dispatch] = useReducer(reducer, initialState);
   const { data } = useSearchQuotes(searchState);
   return (
-    <div className="flex flex-col h-full py-2 md:w-[90%] lg:w-[75%] xl:w-[60%] mx-auto">
+    <div className="flex flex-col h-full py-2 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[80%] mx-auto">
       <div className="z-100">
         <QuotableHeader />
         <div
           className="relative bg-indigo-100 mt-8 border-2 border-indigo-800 rounded-md
         py-2 px-3"
         >
-          <div className="absolute top-[-25px] py-1 px-2 left-[-15px] rounded-md border border-indigo-800 bg-indigo-600">
+          <div className="absolute top-[-40px] py-1 px-2 left-0 md:left-[-15px] rounded-md border border-indigo-800 bg-indigo-600">
             <p className="text-lg font-bold text-white">Search Quotes</p>
           </div>
           <div className="mt-2">
@@ -72,10 +72,15 @@ const Searchquotes = () => {
           className="relative bg-indigo-100 border border-indigo-600
             rounded-md pb-2 mt-12  overflow-y-scroll"
         >
-          <div className="fixed py-1 px-2 mt-[-30px]  ml-[-10px]  w-max rounded-md border border-indigo-800 bg-indigo-600">
-            <p className="text-lg font-bold text-white">Result Quotes</p>
+          <div
+            className="fixed py-1 px-2 mt-[-40px] ml-0 md:ml-[-10px] w-max rounded-md border 
+                        border-indigo-800 bg-indigo-600"
+          >
+            <p className="text-lg font-bold text-white">
+              {data.length} Result Quotes
+            </p>
           </div>
-          <div className="mt-3 flex flex-row flex-wrap">
+          <div className="mt-3 flex flex-col items-center lg:flex-row lg:justify-center lg:flex-wrap">
             <SearchQuoteResults data={data} />
           </div>
         </div>

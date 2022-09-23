@@ -6,10 +6,14 @@ import { server } from "../config";
 import { QuoteRecord } from "../types";
 import { GrAdd } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
+import { AiFillCopy } from "react-icons/ai";
+
 import { useRouter } from "next/router";
 
-import { useAuthorsQuotes, useSearchQuotes } from "../queries/queryHooks";
+import { useSearchQuotes } from "../queries/queryHooks";
 import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
+import useCopyToClipboard from "../hooks/useCopyToClipboard";
 
 const getRandomQuote = async () => {
   const response = await fetch(`/api/quotes/randomquote`);
@@ -18,24 +22,19 @@ const getRandomQuote = async () => {
 };
 const Home: NextPage = () => {
   const route = useRouter();
-  const { isLoading, data } = useQuery(["randomquote"], getRandomQuote);
+  const [value, copy] = useCopyToClipboard();
+  const { isLoading, data, refetch } = useQuery(
+    ["randomquote"],
+    getRandomQuote,
+    {
+      enabled: false,
+    }
+  );
 
-  // const { isLoading, data } = useAuthorsQuotes("Albert Einstein");
-  // const { data: filterAuthor } = useSearchQuotes({
-  //   authorSearch: ["Albert Einstein", "Truman Capote"],
-  // });
-  // console.log("data", data);
-  // console.log("filterAuthor", filterAuthor);
-  // const [data, setData] = useState();
+  useEffect(() => {
+    refetch();
+  }, []);
 
-  // useEffect(() => {
-  //   const getQuote = async () => {
-  //     const myData = await fetch("/api/randomquote").then((res) => res.json());
-  //     setData(myData);
-  //   };
-  //   getQuote();
-  // }, []);
-  // console.log("data", data);
   const postQuote = async () => {
     const newQuote = {
       id: "",
@@ -103,7 +102,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-indigo-50">
       <Head>
-        <title>Create Next App</title>
+        <title>Quotable</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-row justify-center w-full px-20 items-baseline space-x-5">
@@ -117,7 +116,12 @@ const Home: NextPage = () => {
             className="group-hover:scale-110 transition-all ease-in-out duration-500"
           />
         </div>
-        <h1 className="text-6xl ">Quotable</h1>
+        <h1
+          className="text-6xl cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
+          onClick={() => refetch()}
+        >
+          Quotable
+        </h1>
         <div
           onClick={() => route.push("/searchquotes")}
           className="border border-black py-2 px-5 rounded-2xl hover:scale-110 bg-indigo-200 hover:bg-indigo-300
@@ -131,11 +135,32 @@ const Home: NextPage = () => {
       </div>
       <main className="flex w-full flex-1 flex-col items-center justify-start px-20 text-center">
         <div
-          className="mt-[150px] flex flex-col justify-center border-2 border-indigo-500 rounded-2xl p-10
+          className="group relative mt-[150px] flex flex-col justify-center border-2 border-indigo-500 rounded-2xl p-10
         bg-indigo-100"
         >
+          <div
+            className="invisible group-hover:visible group-hover:opacity-70 absolute cursor-pointer 
+            top-0 left-0 border-r-2 border-b-2 border-indigo-600 pt-2 pb-1 pl-3 pr-2 rounded-br-md
+            hover:border-r-4 hover:border-b-4 hover:text-indigo-700
+            active:text-indigo-400
+            transition-all ease-in-out duration-300"
+            onClick={() =>
+              copy(`${data.randQuote.quote}\n${data.randQuote.author}`)
+            }
+          >
+            <AiFillCopy />
+          </div>
           <div className="text-4xl mb-5">{data.randQuote.quote}</div>
-          <div className="text-2xl"> by {data.randQuote.author}</div>
+          <div className="text-2xl">
+            {" "}
+            by{" "}
+            <Link
+              target="_blank"
+              href={`https://www.google.com/search?q=${data.randQuote.author}`}
+            >
+              <a target="_blank">{data.randQuote.author}</a>
+            </Link>
+          </div>
         </div>
       </main>
     </div>

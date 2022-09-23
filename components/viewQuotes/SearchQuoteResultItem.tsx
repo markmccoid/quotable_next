@@ -10,7 +10,7 @@ const SearchQuoteResultItem = ({ quoteData }: Props) => {
   return (
     <div
       className="relative flex flex-col pt-5 px-3 mt-[40px] justify-between
-              border-2 border-indigo-700 rounded-md mx-2 py-2 mb-2 h-[200px] w-[48%]
+              border-2 border-indigo-700 rounded-md mx-2 py-2 mb-2 h-[200px] w-[95%] lg:w-[48%]
               shadow-lg bg-indigo-300"
     >
       <div
@@ -24,12 +24,12 @@ const SearchQuoteResultItem = ({ quoteData }: Props) => {
           readOnly
         />
       </div>
-      <div className="text-xl overflow-y-scroll h-[150px] scrollbar-hide mb-1">
+      <div className="flex text-xl overflow-y-scroll h-[150px] scrollbar-hide mb-1 items-center text-center">
         {quoteData.quote}
       </div>
       <div className="flex flex-row space-x-2 overflow-x-scroll  scrollbar-hide">
         {quoteData?.tags.map((el) => (
-          <TagItem tag={el} />
+          <TagItem key={el} tag={el} />
         ))}
       </div>
     </div>
