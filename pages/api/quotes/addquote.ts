@@ -7,7 +7,6 @@ export default async function addQuote(
   res: NextApiResponse<{}>
 ) {
   const { newQuote }: { newQuote: QuoteRecord } = req.body;
-
   quotesDB.addNewQuote(newQuote);
   return res.status(200).json({});
 }

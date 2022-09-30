@@ -8,6 +8,8 @@ import { CommonProps, GroupBase } from "react-select";
 import Creatable from "react-select/creatable";
 import { useRouter } from "next/router";
 import QuotableHeader from "../components/QuotableHeader";
+import { useStore } from "../store";
+import { useAuthorsList, useTagsList } from "../queries/queryHooks";
 
 type Form = {
   quote: { value: string };
@@ -17,12 +19,12 @@ type Form = {
   rating: { value: string };
 };
 
-const getAuthors = async () => {
-  return await fetch(`api/quotes/get/authors`).then((res) => res.json());
-};
-const getTags = async () => {
-  return await fetch(`api/quotes/get/tags`).then((res) => res.json());
-};
+// const getAuthors = async () => {
+//   return await fetch(`api/quotes/get/authors`).then((res) => res.json());
+// };
+// const getTags = async () => {
+//   return await fetch(`api/quotes/get/tags`).then((res) => res.json());
+// };
 
 type TagOptions = {
   label: string;
@@ -37,6 +39,8 @@ const formatTags = (tags: string[]): TagOptions[] => {
   return tagOptions;
 };
 const addquote = () => {
+  // Store data
+  const addNewQuote = useStore((state) => state.addNewQuote);
   const selectRef =
     useRef<CommonProps<TagOptions, true, GroupBase<TagOptions>>>();
   const [ratingValue, setRatingValue] = useState(0); // <-- Init with 0 for no initial value
@@ -46,18 +50,10 @@ const addquote = () => {
   const [bio, setBio] = useState("");
   const [tagsSelected, setTagsSelected] = useState<string[]>([]);
   const [tagOptions, setTagOptions] = useState<TagOptions[]>([]);
-  const { isLoading, data: authorArray } = useQuery(["authorList"], getAuthors);
-  const { isLoading: isLoadingTags, data: tagsArray } = useQuery(
-    ["tagsList"],
-    getTags
-  );
-  const router = useRouter();
-
-  React.useEffect(() => {
-    if (tagsArray) {
-      setTagOptions(formatTags(tagsArray));
-    }
-  }, [tagsArray]);
+  // const authorArray = useAuthorsList("select");
+  // const tagsArray = useTagsList("select");
+  const authorArray = useAuthorsList("raw");
+  const tagsArray = useTagsList("select");
 
   //! -------SUBMIT QUOTE --------------------------
   const submitQuote = async (e: React.SyntheticEvent) => {
@@ -73,17 +69,18 @@ const addquote = () => {
       rating: ratingValue,
     };
 
-    const rawResponse = await fetch("api/quotes/addquote", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ newQuote }),
-    });
-    const content = await rawResponse;
+    // const rawResponse = await fetch("api/quotes/addquote", {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ newQuote }),
+    // });
+    // const content = await rawResponse;
 
-    if (content.status == 200) {
+    const result = addNewQuote(newQuote);
+    if (result) {
       //Reset Form data
       target.quote.value = "";
       setAuthor("");
@@ -186,7 +183,7 @@ const addquote = () => {
                 <Creatable
                   ref={selectRef}
                   instanceId="tag"
-                  options={tagOptions}
+                  options={tagsArray}
                   isClearable
                   isMulti
                   onChange={(e) => setTagsSelected(e.map((el) => el.value))}

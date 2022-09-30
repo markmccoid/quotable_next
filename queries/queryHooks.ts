@@ -1,3 +1,4 @@
+import { useStore } from "./../store/index";
 import { SearchState } from "./../pages/searchquotes";
 import { QueryFunctionContext, useQuery } from "@tanstack/react-query";
 import { queryKeys } from "../queries";
@@ -5,26 +6,26 @@ import type { AuthorsKeys } from "./authorKeys";
 import type { QuotesKeys } from "./quotesKeys";
 import { QuoteRecord } from "../types";
 import _orderBy from "lodash/orderBy";
-import orderBy from "lodash/orderBy";
 
 //----------------------------
 //-- Quote Authors Code
 //----------------------------
 type AuthorsQueryKey = AuthorsKeys["_def"];
 
-const fetchAuthor = async (
-  ctx: QueryFunctionContext<AuthorsQueryKey, string>
-) => {
-  const response = await fetch(`/api/quotes/get/authors`);
-  return await response.json();
-};
+// const fetchAuthor = async (
+//   ctx: QueryFunctionContext<AuthorsQueryKey, string>
+// ) => {
+//   const response = await fetch(`/api/quotes/get/authors`);
+//   return await response.json();
+// };
 
 // Export Hook to get quotes for specific Author
 type AuthorListFormat = "raw" | "select";
 
 export function useAuthorsList(format: AuthorListFormat) {
-  const { data } = useQuery(queryKeys.authors._def, fetchAuthor);
-  const orderedData = orderBy(data);
+  const quotes = useStore((state) => state.quotes);
+  const authorsList = Array.from(new Set(quotes.map((el) => el.author)));
+  const orderedData = _orderBy(authorsList);
   if (format === "raw") return orderedData;
   if (format === "select") {
     return orderedData.map((el: string) => ({ label: el, value: el }));
@@ -36,17 +37,19 @@ export function useAuthorsList(format: AuthorListFormat) {
 //----------------------------
 type TagsQueryKey = ["taglist"];
 
-const fetchTags = async (ctx: QueryFunctionContext<TagsQueryKey, string>) => {
-  const response = await fetch(`/api/quotes/get/tags`);
-  return await response.json();
-};
+// const fetchTags = async (ctx: QueryFunctionContext<TagsQueryKey, string>) => {
+//   const response = await fetch(`/api/quotes/get/tags`);
+//   return await response.json();
+// };
 
 // Export Hook to get quotes for specific Author
 type TagListFormat = "raw" | "select";
 
 export function useTagsList(format: TagListFormat) {
-  const { data } = useQuery(["taglist"], fetchTags);
-  const orderedData = orderBy(data);
+  // const { data } = useQuery(["taglist"], fetchTags);
+  const quotes = useStore((state) => state.quotes);
+  const tagsList = Array.from(new Set(quotes.map((el) => el.tags).flat()));
+  const orderedData = _orderBy(tagsList);
   if (format === "raw") return orderedData;
   if (format === "select") {
     return orderedData.map((el: string) => ({ label: el, value: el }));

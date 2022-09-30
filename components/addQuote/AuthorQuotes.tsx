@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from "react";
 import { QuoteRecord } from "../../types";
 import { motion } from "framer-motion";
+import { useStore } from "../../store";
 
 type Props = {
   currAuthor: string;
@@ -8,15 +9,17 @@ type Props = {
 };
 const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
   const [currQuotes, setCurrQuotes] = useState<QuoteRecord[]>([]);
+  const searchQoutes = useStore((state) => state.searchQuotes);
 
   useEffect(() => {
-    const getQuotes = async () => {
-      const response = await fetch(
-        `/api/quotes/search?authortext=${currAuthor}`
-      );
-      const data = await response.json();
-      setCurrQuotes(data);
-      updateBio(data[0].authorBio);
+    const getQuotes = () => {
+      const quotesFound = searchQoutes({ authorText: currAuthor });
+      // const response = await fetch(
+      //   `/api/quotes/search?authortext=${currAuthor}`
+      // );
+      // const data = await response.json();
+      setCurrQuotes(quotesFound);
+      updateBio(quotesFound[0].authorBio);
     };
     // Only get quotes if an author is passed
     if (currAuthor.length > 0) {

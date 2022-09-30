@@ -14,6 +14,9 @@ import { useSearchQuotes } from "../queries/queryHooks";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import useCopyToClipboard from "../hooks/useCopyToClipboard";
+import { useStore } from "../store";
+
+// import { getQuotes } from "../queries/getQuotes";
 
 const getRandomQuote = async () => {
   const response = await fetch(`/api/quotes/randomquote`);
@@ -21,19 +24,26 @@ const getRandomQuote = async () => {
   return data;
 };
 const Home: NextPage = () => {
+  const getRandomQuote = useStore((state) => state.getRandomQuote);
+  const isInitialized = useStore((state) => state.isInitialized);
+
   const route = useRouter();
   const [value, copy] = useCopyToClipboard();
   const { isLoading, data, refetch } = useQuery(
     ["randomquote"],
-    getRandomQuote,
+    () => getRandomQuote(),
     {
       enabled: false,
     }
   );
 
   useEffect(() => {
-    refetch();
-  }, []);
+    const getInitialQuote = async () => {
+      refetch();
+    };
+    if (isInitialized) getInitialQuote();
+    // getQuotes().then((res) => console.log(res));
+  }, [isInitialized]);
 
   const postQuote = async () => {
     const newQuote = {
@@ -95,9 +105,9 @@ const Home: NextPage = () => {
     );
   };
 
-  if (isLoading) {
-    return <div>Loading</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading</div>;
+  // }
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-indigo-50">
@@ -118,7 +128,10 @@ const Home: NextPage = () => {
         </div>
         <h1
           className="text-6xl cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
-          onClick={() => refetch()}
+          onClick={() => {
+            console.log("refetching");
+            refetch();
+          }}
         >
           Quotable
         </h1>
@@ -144,21 +157,19 @@ const Home: NextPage = () => {
             hover:border-r-4 hover:border-b-4 hover:text-indigo-700
             active:text-indigo-400
             transition-all ease-in-out duration-300"
-            onClick={() =>
-              copy(`${data.randQuote.quote}\n${data.randQuote.author}`)
-            }
+            onClick={() => copy(`${data?.quote}\n${data?.author}`)}
           >
             <AiFillCopy />
           </div>
-          <div className="text-4xl mb-5">{data.randQuote.quote}</div>
+          <div className="text-4xl mb-5">{data?.quote}</div>
           <div className="text-2xl">
             {" "}
             by{" "}
             <Link
               target="_blank"
-              href={`https://www.google.com/search?q=${data.randQuote.author}`}
+              href={`https://www.google.com/search?q=${data?.author}`}
             >
-              <a target="_blank">{data.randQuote.author}</a>
+              <a target="_blank">{data?.author}</a>
             </Link>
           </div>
         </div>
