@@ -1,7 +1,7 @@
 import { QuoteRecord } from "../types";
 import { getQuotes } from "../queries/getQuotes";
 import { primarySearch, byQuote } from "./quote-search";
-import { fbQuoteObj } from "../queries/firebase";
+import { fbQuoteObj } from "../firebase/firebase";
 
 export let quoteSearch = {};
 export const initializeQuotes = async () => {

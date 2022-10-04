@@ -22,16 +22,12 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
 };
 
-initializeApp(firebaseConfig);
+const fbApp = initializeApp(firebaseConfig);
 
-// console.log("store", store.getState().quotes);
-// console.log("store", store.getState().initQuotes());
+export const db = getFirestore(fbApp);
 
-// // init services
-export const db = getFirestore();
-
-// // get Collection
-export const quotesRef = collection(db, "qoutes");
+export const quotesRef = collection(db, "quotes");
+export const quoteCollectionName = "quotes";
 
 // // get collection data
 // let quotesArray = [];

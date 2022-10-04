@@ -1,8 +1,10 @@
+import { initializeApp } from "firebase/app";
 import { QuoteRecord } from "./../types/index";
 import create from "zustand";
 import { getQuotes } from "../queries/getQuotes";
 import { v4 as uuid } from "uuid";
-import { quotesRef } from "../queries/firebase";
+import { db, quoteCollectionName, quotesRef } from "../firebase/firebase";
+import { addNewQuoteToFirestore } from "../firebase/firestore";
 
 import {
   getFirestore,
@@ -11,15 +13,16 @@ import {
   addDoc,
   deleteDoc,
   doc,
+  setDoc,
 } from "firebase/firestore";
 
 type Store = {
   quotes: QuoteRecord[] | [];
   isInitialized: boolean;
+  setIsInitialized: (initializedBool: boolean) => void;
   getRandomQuote: () => Promise<QuoteRecord>;
-  initQuotes: () => void;
   searchQuotes: (searchParams: PrimarySearch) => QuoteRecord[] | undefined;
-  addNewQuote: (newQuote: QuoteRecord) => Promise<string | undefined>;
+  addNewQuoteSnap: (newQuote: QuoteRecord) => void;
   deleteQuote: (quoteId: string) => void;
   updateQuote: (quoteId: string, updatedQuote: QuoteRecord) => void;
 };
@@ -94,32 +97,22 @@ const searchQuotes =
 export const useStore = create<Store>((set, get) => ({
   quotes: [],
   isInitialized: false,
+  setIsInitialized: (initializedBool: boolean) =>
+    set({ isInitialized: initializedBool || true }),
   getRandomQuote: async () =>
     get().quotes[Math.floor(Math.random() * get().quotes.length)],
-  initQuotes: async () => {
-    const quotes = await getQuotes();
-    set({ quotes, isInitialized: true });
-  },
+
   searchQuotes: searchQuotes(set, get),
-  addNewQuote: async (newQuote) => {
-    console.log("Add Quote", newQuote);
-    // generate new quote id
-    newQuote.id = uuid();
-
-    // set date created and updated
-    newQuote.createDate = new Date().toLocaleDateString().replaceAll("/", "-");
-    newQuote.authorBio = newQuote.authorBio.trim();
-    newQuote.author = newQuote.author.trim();
-    newQuote.tags = Array.isArray(newQuote.tags)
-      ? newQuote.tags
-      : newQuote.tags.split(",").map((el) => el.trim());
-
-    //add to firestore
-    const docRef = await addDoc(quotesRef, newQuote);
-
-    return docRef.id;
+  addNewQuoteSnap: (newQuote) => {
+    // Insert quote to firestore.  Return the full quote with newly assigned id
+    // const quoteWithId = await addNewQuoteToFirestore(newQuote);
+    // add new quote to the store.quotes array
+    set({ quotes: [...get().quotes, newQuote] });
+    // No return, the firestore add will throw an error if there is a problem
   },
-  deleteQuote(id) {},
+  deleteQuote: (id: string) => {
+    set({ quotes: get().quotes.filter((q: QuoteRecord) => q.id !== id) });
+  },
   updateQuote() {
     //set();
   },

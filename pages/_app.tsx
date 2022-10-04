@@ -4,22 +4,28 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 import "@smastrom/react-rating/style.css";
 
-const queryClient = new QueryClient();
 // Initialize Firebase
-import "../queries/firebase";
-import useStore from "../store";
+// import "../firebase/firebase";
+// import useStore from "../store";
+import { useFirebase } from "../firebase/useFirebase";
+
+const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const initQuotes = useStore((state) => state.initQuotes);
+  // Initialize firebase and setup listening to keep
+  // data in sync with our store.
+  useFirebase();
+
   // Initialize Zuzstand store
   // This will be async, so anything loads on start of app must
   // check isInitialized flag from store before accessing store functions
-  useEffect(() => {
-    const getInitialQuote = async () => {
-      await initQuotes();
-    };
-    getInitialQuote();
-  }, []);
+
+  // useEffect(() => {
+  //   const getInitialQuote = async () => {
+  //     await initQuotes();
+  //   };
+  //   getInitialQuote();
+  // }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

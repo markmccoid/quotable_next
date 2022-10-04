@@ -1,20 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { server } from "../config";
-import { QuoteRecord } from "../types";
 import { GrAdd } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
 import { AiFillCopy } from "react-icons/ai";
 
 import { useRouter } from "next/router";
 
-import { useSearchQuotes } from "../queries/queryHooks";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import useCopyToClipboard from "../hooks/useCopyToClipboard";
 import { useStore } from "../store";
+import { importData } from "../queries/importQuotes";
 
 // import { getQuotes } from "../queries/getQuotes";
 
@@ -26,6 +23,8 @@ const getRandomQuote = async () => {
 const Home: NextPage = () => {
   const getRandomQuote = useStore((state) => state.getRandomQuote);
   const isInitialized = useStore((state) => state.isInitialized);
+  const deleteQuote = useStore((state) => state.deleteQuote);
+  const quotes = useStore((state) => state.quotes);
 
   const route = useRouter();
   const [value, copy] = useCopyToClipboard();
@@ -36,8 +35,8 @@ const Home: NextPage = () => {
       enabled: false,
     }
   );
-
   useEffect(() => {
+    console.log("isintialize", isInitialized, data);
     const getInitialQuote = async () => {
       refetch();
     };
@@ -129,7 +128,6 @@ const Home: NextPage = () => {
         <h1
           className="text-6xl cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
           onClick={() => {
-            console.log("refetching");
             refetch();
           }}
         >
@@ -173,6 +171,21 @@ const Home: NextPage = () => {
             </Link>
           </div>
         </div>
+        {/* <button
+          onClick={async () => {
+            await importData();
+            await initQuotes();
+          }}
+        >
+          Import
+        </button> */}
+        <button
+          onClick={() => {
+            deleteQuote("e1aa9ec5-be07-4449-8cc1-ae9d139e7d92");
+          }}
+        >
+          Delete quote
+        </button>
       </main>
     </div>
   );

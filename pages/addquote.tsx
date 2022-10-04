@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import QuotableHeader from "../components/QuotableHeader";
 import { useStore } from "../store";
 import { useAuthorsList, useTagsList } from "../queries/queryHooks";
+import { addNewQuoteToFirestore } from "../firebase/firestore";
 
 type Form = {
   quote: { value: string };
@@ -60,8 +61,7 @@ const addquote = () => {
     e.preventDefault();
     // type a var to use to pull form values
     const target = e.target as typeof e.target & Form;
-    const newQuote: QuoteRecord = {
-      id: "",
+    const newQuote: Omit<QuoteRecord, "id"> = {
       quote: target.quote.value.trim(),
       author: target.author.value.trim(),
       authorBio: target.authorBio.value.trim(),
@@ -69,29 +69,18 @@ const addquote = () => {
       rating: ratingValue,
     };
 
-    // const rawResponse = await fetch("api/quotes/addquote", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ newQuote }),
-    // });
-    // const content = await rawResponse;
-
-    const result = addNewQuote(newQuote);
-    if (result) {
-      //Reset Form data
-      target.quote.value = "";
-      setAuthor("");
-      setFoundAuthor("");
-      setBio("");
-      setTagsSelected([]);
-      setRatingValue(0);
-      if (selectRef.current) selectRef.current.clearValue();
-    } else {
-      alert("Error Saving Quote");
-    }
+    const result = addNewQuoteToFirestore(newQuote)
+      .then(() => {
+        //Reset Form data
+        target.quote.value = "";
+        setAuthor("");
+        setFoundAuthor("");
+        setBio("");
+        setTagsSelected([]);
+        setRatingValue(0);
+        if (selectRef.current) selectRef.current.clearValue();
+      })
+      .catch((e) => alert(e));
   };
   //! -------END SUBMIT QUOTE --------------------------
 
