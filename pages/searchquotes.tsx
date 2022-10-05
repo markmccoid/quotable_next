@@ -1,15 +1,10 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import QuotableHeader from "../components/QuotableHeader";
 import SearchQuoteComponents from "../components/viewQuotes/SearchQuoteComponents";
 import SearchQuoteResults from "../components/viewQuotes/SearchQuoteResults";
-import { useSearchQuotes } from "../queries/queryHooks";
+import { useSearchQuotes } from "../hooks/useSearchQuotes";
+import { SearchState } from "../store";
 
-export type SearchState = {
-  quoteSearch?: string | undefined;
-  ratingSearch?: number;
-  authorSearch?: string[] | undefined;
-  tagSearch?: string[] | undefined;
-};
 export type Actions =
   | { type: "quote"; payload: string | undefined }
   | { type: "author"; payload: string[] | undefined }
@@ -24,6 +19,11 @@ const initialState: SearchState = {
 };
 
 const reducer = (state: SearchState, action: Actions) => {
+  // If an empty array is passed for any payload, turn it into undefined
+  // This will alert the search function to "ignore" that search.
+  if (Array.isArray(action.payload)) {
+    action.payload = action.payload.length === 0 ? undefined : action.payload;
+  }
   switch (action.type) {
     case "quote":
       return { ...state, quoteSearch: action.payload };
@@ -35,6 +35,8 @@ const reducer = (state: SearchState, action: Actions) => {
       return { ...state, tagSearch: action.payload };
       break;
     case "rating":
+      //! Need to add a checkbox state that indicates if searching by payload
+      //! otherwise, zero only returns zero ratings
       return { ...state, ratingSearch: action.payload };
       break;
     default:
@@ -43,7 +45,8 @@ const reducer = (state: SearchState, action: Actions) => {
 };
 const Searchquotes = () => {
   const [searchState, dispatch] = useReducer(reducer, initialState);
-  const { data } = useSearchQuotes(searchState);
+  const data = useSearchQuotes(searchState);
+
   return (
     <div className="flex flex-col h-full py-2 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[80%] mx-auto">
       <div className="z-100">

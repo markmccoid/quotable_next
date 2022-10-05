@@ -41,18 +41,14 @@ const formatTags = (tags: string[]): TagOptions[] => {
 };
 const addquote = () => {
   // Store data
-  const addNewQuote = useStore((state) => state.addNewQuote);
   const selectRef =
     useRef<CommonProps<TagOptions, true, GroupBase<TagOptions>>>();
   const [ratingValue, setRatingValue] = useState(0); // <-- Init with 0 for no initial value
   const [foundAuthor, setFoundAuthor] = useState("");
   const [author, setAuthor] = useState("");
-  // const [authorArray, setAuthorArray] = useState([]);
   const [bio, setBio] = useState("");
   const [tagsSelected, setTagsSelected] = useState<string[]>([]);
-  const [tagOptions, setTagOptions] = useState<TagOptions[]>([]);
-  // const authorArray = useAuthorsList("select");
-  // const tagsArray = useTagsList("select");
+
   const authorArray = useAuthorsList("raw");
   const tagsArray = useTagsList("select");
 

@@ -1,9 +1,10 @@
 import { Rating } from "@smastrom/react-rating";
 import { useCallback, useState } from "react";
-import { SearchState, Actions } from "../../pages/searchquotes";
+import { Actions } from "../../pages/searchquotes";
 import _debounce from "lodash/debounce";
 import Select from "react-select";
 import { useAuthorsList, useTagsList } from "../../queries/queryHooks";
+import { SearchState } from "../../store";
 
 type Props = {
   searchState: SearchState;
@@ -57,7 +58,9 @@ const SearchQuoteComponents = ({ searchState, dispatch }: Props) => {
               options={tagsList}
               instanceId="tags"
               isMulti
-              onChange={(e) => setTags(e.map((el) => el.value))}
+              onChange={(e) =>
+                setTags(e.length === 0 ? undefined : e.map((el) => el.value))
+              }
             />
           </div>
         </div>

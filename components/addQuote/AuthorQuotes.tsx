@@ -13,13 +13,16 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
 
   useEffect(() => {
     const getQuotes = () => {
-      const quotesFound = searchQoutes({ authorText: currAuthor });
+      const quotesFound = searchQoutes({ authorSearch: [currAuthor] });
+      console.log("AuthorQuotes - quotesFound", quotesFound);
       // const response = await fetch(
       //   `/api/quotes/search?authortext=${currAuthor}`
       // );
       // const data = await response.json();
       setCurrQuotes(quotesFound);
-      updateBio(quotesFound[0].authorBio);
+      if (quotesFound) {
+        updateBio(quotesFound[0].authorBio);
+      }
     };
     // Only get quotes if an author is passed
     if (currAuthor.length > 0) {
@@ -50,18 +53,19 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
         variants={variants}
         transition={{ duration: 0.5 }}
       >
-        {currQuotes.map((q) => {
-          return (
-            // <div key={q.id}>
-            <div
-              key={q.id}
-              className="text-md m-2 p-2 border border-gray-700 rounded-lg bg-indigo-100"
-            >
-              {q.quote}
-            </div>
-            // </div>
-          );
-        })}
+        {currQuotes &&
+          currQuotes.map((q) => {
+            return (
+              // <div key={q.id}>
+              <div
+                key={q.id}
+                className="text-md m-2 p-2 border border-gray-700 rounded-lg bg-indigo-100"
+              >
+                {q.quote}
+              </div>
+              // </div>
+            );
+          })}
       </motion.div>
     </div>
   );

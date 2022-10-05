@@ -23,90 +23,16 @@ const getRandomQuote = async () => {
 const Home: NextPage = () => {
   const getRandomQuote = useStore((state) => state.getRandomQuote);
   const isInitialized = useStore((state) => state.isInitialized);
-  const deleteQuote = useStore((state) => state.deleteQuote);
-  const quotes = useStore((state) => state.quotes);
 
+  const [randomQuote, setRandomQuote] = useState(undefined);
   const route = useRouter();
   const [value, copy] = useCopyToClipboard();
-  const { isLoading, data, refetch } = useQuery(
-    ["randomquote"],
-    () => getRandomQuote(),
-    {
-      enabled: false,
-    }
-  );
+
   useEffect(() => {
-    console.log("isintialize", isInitialized, data);
-    const getInitialQuote = async () => {
-      refetch();
-    };
-    if (isInitialized) getInitialQuote();
-    // getQuotes().then((res) => console.log(res));
+    if (isInitialized) {
+      setRandomQuote(getRandomQuote());
+    }
   }, [isInitialized]);
-
-  const postQuote = async () => {
-    const newQuote = {
-      id: "",
-      quote: "Program Every Dat.",
-      author: "Mark McCoid",
-      authorBio: "Someone",
-      tags: ["Motivation", "Hope"],
-      rating: 5,
-      createDate: "9-5-2022",
-    };
-    const rawResponse = await fetch("api/quotes/addquote", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ newQuote }),
-    });
-    const content = await rawResponse.json();
-
-    console.log("post done", content);
-  };
-  const updateQuote = async () => {
-    const idToUpdate = "7c867e4e-4c37-4dc4-808b-b0268394e218";
-    const updatedQuote = {
-      id: idToUpdate,
-      tags: ["Motive"],
-      quote: "Have patience. All things are difficult before they become easy.",
-      authorBio: "Here I am",
-    };
-
-    const rawResponse = await fetch("api/quotes/updatequote", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ updatedQuote }),
-    });
-    const content = await rawResponse.json();
-
-    console.log("post done", content);
-  };
-
-  const getQuote = async () => {
-    const qId = "7c867e4e-4c37-4dc4-808b-b0268394e218";
-    const data = await fetch(`api/quotes/${qId}`).then((res) => res.json());
-    console.log("data", data);
-  };
-
-  const search = async () => {
-    const data = await fetch(`api/quotes/search?authorText=Tom`);
-    const quotes = await data.json();
-
-    console.log(
-      "data",
-      quotes.map((el) => `${el.rating}=${el.tags}`)
-    );
-  };
-
-  // if (isLoading) {
-  //   return <div>Loading</div>;
-  // }
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-indigo-50">
@@ -128,7 +54,7 @@ const Home: NextPage = () => {
         <h1
           className="text-6xl cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
           onClick={() => {
-            refetch();
+            setRandomQuote(getRandomQuote());
           }}
         >
           Quotable
@@ -155,21 +81,29 @@ const Home: NextPage = () => {
             hover:border-r-4 hover:border-b-4 hover:text-indigo-700
             active:text-indigo-400
             transition-all ease-in-out duration-300"
-            onClick={() => copy(`${data?.quote}\n${data?.author}`)}
+            onClick={() =>
+              copy(`${randomQuote?.quote}\n${randomQuote?.author}`)
+            }
           >
             <AiFillCopy />
           </div>
-          <div className="text-4xl mb-5">{data?.quote}</div>
-          <div className="text-2xl">
-            {" "}
-            by{" "}
-            <Link
-              target="_blank"
-              href={`https://www.google.com/search?q=${data?.author}`}
-            >
-              <a target="_blank">{data?.author}</a>
-            </Link>
-          </div>
+          {randomQuote ? (
+            <>
+              <div className="text-4xl mb-5">{randomQuote?.quote}</div>
+              <div className="text-2xl">
+                {" "}
+                by{" "}
+                <Link
+                  target="_blank"
+                  href={`https://www.google.com/search?q=${randomQuote?.author}`}
+                >
+                  <a target="_blank">{randomQuote?.author}</a>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="w-[50%] text-2xl">loading</div>
+          )}
         </div>
         {/* <button
           onClick={async () => {
@@ -179,13 +113,13 @@ const Home: NextPage = () => {
         >
           Import
         </button> */}
-        <button
+        {/* <button
           onClick={() => {
             deleteQuote("e1aa9ec5-be07-4449-8cc1-ae9d139e7d92");
           }}
         >
           Delete quote
-        </button>
+        </button> */}
       </main>
     </div>
   );

@@ -61,31 +61,31 @@ export function useTagsList(format: TagListFormat) {
 //----------------------------
 type QuotesFilterQueryKey = QuotesKeys["filter"];
 
-const searchQuotes = async (
-  ctx: QueryFunctionContext<QuotesFilterQueryKey, SearchState>
-): Promise<QuoteRecord[]> => {
-  const [, , filter] = ctx.queryKey;
-  // const queryParams = buildQuery({
-  //   query: "authortext",
-  //   value: filter.authorSearch,
-  // });
-  let queryParamsBuild = [];
-  filter.authorSearch &&
-    queryParamsBuild.push(`authortext=${filter.authorSearch}`);
-  filter.quoteSearch &&
-    queryParamsBuild.push(`quotetext=${filter.quoteSearch}`);
-  filter.ratingSearch && queryParamsBuild.push(`rating=${filter.ratingSearch}`);
-  filter.tagSearch && queryParamsBuild.push(`tags=${filter.tagSearch}`);
+// const searchQuotes = async (
+// ctx: QueryFunctionContext<QuotesFilterQueryKey, SearchState>;
+// ): Promise<QuoteRecord[]> => {
+//   const [, , filter] = ctx.queryKey;
+//   // const queryParams = buildQuery({
+//   //   query: "authortext",
+//   //   value: filter.authorSearch,
+//   // });
+//   let queryParamsBuild = [];
+//   filter.authorSearch &&
+//     queryParamsBuild.push(`authortext=${filter.authorSearch}`);
+//   filter.quoteSearch &&
+//     queryParamsBuild.push(`quotetext=${filter.quoteSearch}`);
+//   filter.ratingSearch && queryParamsBuild.push(`rating=${filter.ratingSearch}`);
+//   filter.tagSearch && queryParamsBuild.push(`tags=${filter.tagSearch}`);
 
-  const queryParams = queryParamsBuild.join("&");
-  console.log("query parms", queryParams);
-  // Take into account if NO Search parameters passed
-  const response = await fetch(`/api/quotes/search?${queryParams}`);
-  return await response.json();
-};
+//   const queryParams = queryParamsBuild.join("&");
+//   console.log("query parms", queryParams);
+//   // Take into account if NO Search parameters passed
+//   const response = await fetch(`/api/quotes/search?${queryParams}`);
+//   return await response.json();
+// };
 
-export function useSearchQuotes(filter: SearchState) {
-  return useQuery(queryKeys.quotesKeys.filter(filter), searchQuotes);
-}
+// export function useSearchQuotes(filter: SearchState) {
+//   return useQuery(queryKeys.quotesKeys.filter(filter), searchQuotes);
+// }
 
-function buildQuery({ query, value }: { query: string; value: any }) {}
+// function buildQuery({ query, value }: { query: string; value: any }) {}

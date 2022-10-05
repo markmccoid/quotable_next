@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+
 import {
   getFirestore,
   collection,
@@ -22,13 +23,12 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
 };
 
-const fbApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(fbApp);
+export const db = getFirestore(app);
 
 export const quotesRef = collection(db, "quotes");
 export const quoteCollectionName = "quotes";
-
 // // get collection data
 // let quotesArray = [];
 // getDocs(quotesRef)
