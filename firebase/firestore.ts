@@ -37,7 +37,7 @@ export const addNewQuoteToFirestore = async (
 //------------------------------------
 //-- DELETE Quote from Firestore
 //------------------------------------
-//! NOT TESTED
+//!
 export const deleteQuoteFromFirestore = async (id: string) => {
   try {
     await deleteDoc(doc(db, quoteCollectionName, id));

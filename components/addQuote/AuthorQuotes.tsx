@@ -14,11 +14,7 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
   useEffect(() => {
     const getQuotes = () => {
       const quotesFound = searchQoutes({ authorSearch: [currAuthor] });
-      console.log("AuthorQuotes - quotesFound", quotesFound);
-      // const response = await fetch(
-      //   `/api/quotes/search?authortext=${currAuthor}`
-      // );
-      // const data = await response.json();
+
       setCurrQuotes(quotesFound);
       if (quotesFound) {
         updateBio(quotesFound[0].authorBio);

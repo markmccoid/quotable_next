@@ -27,7 +27,7 @@ type Form = {
 //   return await fetch(`api/quotes/get/tags`).then((res) => res.json());
 // };
 
-type TagOptions = {
+export type TagOptions = {
   label: string;
   value: string;
 };

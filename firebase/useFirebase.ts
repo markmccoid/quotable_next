@@ -6,22 +6,22 @@ import useStore from "../store";
 import shallow from "zustand/shallow";
 
 export const useFirebase = () => {
-  const [addNewQuoteSnap, deleteQuote, toggleQuoteModified] = useStore(
-    (state) => [
-      state.addNewQuoteSnap,
-      state.deleteQuote,
-      state.toggleQuoteModified,
-    ],
-    shallow
-  );
+  const [addNewQuoteSnap, deleteQuote, updateQuote, toggleQuoteModified] =
+    useStore(
+      (state) => [
+        state.addNewQuoteSnap,
+        state.deleteQuote,
+        state.updateQuote,
+        state.toggleQuoteModified,
+      ],
+      shallow
+    );
 
   const setIsInitialized = useStore((state) => state.setIsInitialized);
   const quotesNum = useStore((state) => state.quotes.length);
 
   useEffect(() => {
-    console.log("in Firebase Initialize", quotesNum);
     const unsubscribe = onSnapshot(quotesRef, (snapshot) => {
-      console.log("snapchanges", snapshot.docChanges().length);
       snapshot.docChanges().forEach((change) => {
         if (change.type === "added") {
           // Update store with new quote that was added to firestore
@@ -30,7 +30,8 @@ export const useFirebase = () => {
           toggleQuoteModified();
         }
         if (change.type === "modified") {
-          console.log("Modified: ", change.doc.data());
+          updateQuote(change.doc.data().id, change.doc.data() as QuoteRecord);
+          toggleQuoteModified();
         }
         if (change.type === "removed") {
           // remove quote from store as it was removed from firestore

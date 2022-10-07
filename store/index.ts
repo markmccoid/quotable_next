@@ -114,7 +114,9 @@ export const useStore = create<Store>((set, get) => ({
   quotes: [],
   isInitialized: false,
   quotesModified: 0,
-  toggleQuoteModified: () => set({ quotesModified: get().quotesModified++ }),
+  toggleQuoteModified: () => {
+    set({ quotesModified: get().quotesModified + 1 });
+  },
   setIsInitialized: (initializedBool: boolean) =>
     set({ isInitialized: initializedBool || true }),
   getRandomQuote: () =>
@@ -131,8 +133,11 @@ export const useStore = create<Store>((set, get) => ({
   deleteQuote: (id: string) => {
     set({ quotes: get().quotes.filter((q: QuoteRecord) => q.id !== id) });
   },
-  updateQuote() {
-    //set();
+  updateQuote: (id: string, updatedQuote: QuoteRecord) => {
+    const unaffectedQuotes = get().quotes.filter(
+      (q: QuoteRecord) => q.id !== id
+    );
+    set({ quotes: [updatedQuote, ...unaffectedQuotes] });
   },
 }));
 

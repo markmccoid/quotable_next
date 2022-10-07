@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { QuoteRecord } from "../../types";
 import SearchQuoteResultItem from "./SearchQuoteResultItem";
-import EditQuoteResultItem from "./EditQuoteResultItem";
 
 type Props = {
   data: QuoteRecord[] | undefined;
 };
 const SearchQuoteResults = ({ data }: Props) => {
   const [editingId, setEditingId] = useState<string>(undefined);
-  console.log("setEditingid", editingId);
+  useEffect(() => {
+    // reset any editing if a new search is started
+    setEditingId(undefined);
+  }, [data]);
   return (
     <>
       {data &&

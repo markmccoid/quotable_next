@@ -73,7 +73,7 @@ const Searchquotes = () => {
       {data && (
         <div
           className="relative bg-indigo-100 border border-indigo-600
-            rounded-md pb-2 mt-12  overflow-y-scroll"
+            rounded-md pb-2 mt-12  overflow-y-scroll h-full"
         >
           <div
             className="fixed py-1 px-2 mt-[-40px] ml-0 md:ml-[-10px] w-max rounded-md border 
