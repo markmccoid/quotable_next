@@ -16,6 +16,7 @@ import SearchInput from "../SearchInput";
 import { CommonProps, GroupBase } from "react-select";
 import CreatableSelect from "react-select/creatable";
 import { TagOptions } from "../../pages/addquote";
+import useCopyToClipboard from "../../hooks/useCopyToClipboard";
 
 type Props = {
   quoteData: QuoteRecord;
@@ -47,7 +48,10 @@ const SearchQuoteResultItem = ({
 
   const authorArray = useAuthorsList("raw");
   const tagsArray = useTagsList("select");
-  //---
+
+  const [value, copy] = useCopyToClipboard();
+
+  //---Update quote in firebase
   const updateQuote = () => {
     const updatedQuote: Partial<QuoteRecord> = {
       rating: ratingValue,
@@ -59,8 +63,16 @@ const SearchQuoteResultItem = ({
     setEditingId(undefined);
   };
 
+  //--Delete Quote from firebase
+  const deleteQuote = () => {
+    if (confirm("Delete Quote?")) {
+      deleteQuoteFromFirestore(quoteData.id);
+    }
+  };
+
+  //-- show current tags in edit mode
   useEffect(() => {
-    if (selectRef.current && editingId) {
+    if (selectRef.current && editingId && quoteData.tags.length > 0) {
       selectRef.current.setValue(
         quoteData.tags.map((el) => ({ label: el, value: el })),
         "select-option"
@@ -70,17 +82,18 @@ const SearchQuoteResultItem = ({
 
   return (
     <div
-      className="relative flex flex-col pt-5 px-3 mt-[40px] justify-between
+      className="group relative flex flex-col pt-5 px-3 mt-[40px] justify-between
               border-2 border-indigo-700 rounded-md mx-2 py-2 mb-2 h-[200px] w-[95%] lg:w-[48%]
               shadow-lg bg-indigo-300"
     >
       <div
         className="absolute top-[-25px] flex flex-row justify-between border border-black shadow-lg rounded-lg 
-        py-1 px-5 bg-indigo-500 w-[90%] "
+        py-1 px-5 bg-indigo-500 w-[90%] hover:bg-indigo-600 hover:cursor-copy"
+        onClick={() => copy(`${quoteData?.quote}\n${quoteData?.author}`)}
       >
         {!isBeingEdited ? (
           <>
-            <div className="font-bold text-white ">{quoteData.author}</div>
+            <div className="font-bold text-white">{quoteData.author}</div>
             <Rating
               value={quoteData.rating || 0}
               style={{ maxWidth: 100 }}
@@ -125,15 +138,17 @@ const SearchQuoteResultItem = ({
       </div>
       {/* Delete Icon */}
       <div
-        className="absolute right-0 top-[-20px] border border-black p-1 rounded-md bg-white"
-        onClick={() => deleteQuoteFromFirestore(quoteData.id)}
+        className="absolute right-0 top-[-20px] border border-black p-1 rounded-md bg-white
+        opacity-10 group-hover:opacity-100 transition-all duration-500"
+        onClick={deleteQuote}
       >
         <RiDeleteBin6Line color="red" />
       </div>
       {/* Edit Icon */}
       {showEditIcon && (
         <div
-          className="absolute right-[-10px] top-[10px] border border-black p-1 rounded-md bg-white"
+          className="absolute right-[-10px] top-[10px] border border-black p-1 rounded-md bg-white
+          opacity-10 group-hover:opacity-100 transition-all duration-500"
           onClick={() => setEditingId(quoteData.id)}
         >
           <AiFillEdit color="blue" />

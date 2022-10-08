@@ -18,8 +18,10 @@ export const useFirebase = () => {
     );
 
   const setIsInitialized = useStore((state) => state.setIsInitialized);
-  const quotesNum = useStore((state) => state.quotes.length);
 
+  //-- Subscribe to the firebase snapshot.
+  //-- This will fire every time a change happens on the backend
+  //-- basedo on what happened, this code will update the local store.
   useEffect(() => {
     const unsubscribe = onSnapshot(quotesRef, (snapshot) => {
       snapshot.docChanges().forEach((change) => {

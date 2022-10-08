@@ -7,11 +7,11 @@ import { AiFillCopy } from "react-icons/ai";
 
 import { useRouter } from "next/router";
 
-import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import useCopyToClipboard from "../hooks/useCopyToClipboard";
 import { useStore } from "../store";
-import { importData } from "../queries/importQuotes";
+// import { importData } from "../queries/importQuotes";
+import { useJSONDownload } from "../hooks/useJSONDownload";
 
 // import { getQuotes } from "../queries/getQuotes";
 
@@ -21,8 +21,10 @@ const getRandomQuote = async () => {
   return data;
 };
 const Home: NextPage = () => {
+  const { DownLoadLink, DownLoadIcon } = useJSONDownload();
   const getRandomQuote = useStore((state) => state.getRandomQuote);
   const isInitialized = useStore((state) => state.isInitialized);
+  const quotes = useStore((state) => state.quotes);
 
   const [randomQuote, setRandomQuote] = useState(undefined);
   const route = useRouter();
@@ -113,14 +115,16 @@ const Home: NextPage = () => {
         >
           Import
         </button> */}
-        {/* <button
-          onClick={() => {
-            deleteQuote("e1aa9ec5-be07-4449-8cc1-ae9d139e7d92");
-          }}
-        >
-          Delete quote
-        </button> */}
       </main>
+      <div className="absolute left-0 top-0">
+        <DownLoadLink
+          jsObject={quotes}
+          filename="quotes"
+          className="p-3 rounded-lg bg-red-400 text-white border-2 absolute"
+        >
+          <DownLoadIcon size={25} color="black" />
+        </DownLoadLink>
+      </div>
     </div>
   );
 };

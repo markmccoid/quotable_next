@@ -100,8 +100,8 @@ const searchQuotes =
         matchingIds.push(quoteRec.id);
       }
     }
-    // if nothing matched return undefined
-    if (matchingIds.length === 0) return undefined;
+    // if nothing matched return empty array
+    if (matchingIds.length === 0) return [];
     // Get the matching quotes using the matchingIds var
     return get().quotes.filter((quoteRecord: QuoteRecord) =>
       // matchingIds.some((el) => el === quoteRecord.id)

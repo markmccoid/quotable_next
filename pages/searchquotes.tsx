@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useMemo, useReducer, useState } from "react";
 import QuotableHeader from "../components/QuotableHeader";
 import SearchQuoteComponents from "../components/viewQuotes/SearchQuoteComponents";
 import SearchQuoteResults from "../components/viewQuotes/SearchQuoteResults";
@@ -45,8 +45,33 @@ const reducer = (state: SearchState, action: Actions) => {
 };
 const Searchquotes = () => {
   const [searchState, dispatch] = useReducer(reducer, initialState);
-  const data = useSearchQuotes(searchState);
+  const [data] = useSearchQuotes(searchState);
 
+  const myString = "Loading";
+  const loadingDivs = useMemo(
+    () =>
+      myString.split("").map((el, index) => {
+        if (index % 2) {
+          return (
+            <div
+              key={el}
+              className={`text-xl animate-[bounce_1.2s_ease-in-out_infinite]`}
+            >
+              {el}
+            </div>
+          );
+        }
+        return (
+          <div
+            key={el}
+            className={`text-xl animate-[bounce_1s_ease-in-out_infinite]`}
+          >
+            {el}
+          </div>
+        );
+      }),
+    []
+  );
   return (
     <div className="flex flex-col h-full py-2 w-[100%] md:w-[90%] lg:w-[80%] xl:w-[80%] mx-auto">
       <div className="z-100">
@@ -70,24 +95,35 @@ const Searchquotes = () => {
       {/* <div className="py-1 px-2 mt-5 mb-[-20px] ml-[-10px] z-10 w-max rounded-md border border-indigo-800 bg-indigo-600">
         <p className="text-lg font-bold text-white">Result Quotes</p>
       </div> */}
-      {data && (
-        <div
-          className="relative bg-indigo-100 border border-indigo-600
+
+      <div
+        className="relative bg-indigo-100 border border-indigo-600
             rounded-md pb-2 mt-12  overflow-y-scroll h-full"
-        >
-          <div
-            className="fixed py-1 px-2 mt-[-40px] ml-0 md:ml-[-10px] w-max rounded-md border 
+      >
+        {!data ? (
+          <div className="flex justify-center mt-10 space-x-2">
+            {loadingDivs}
+            <div className="h-[20px] w-[20px] animate-bounce rounded-[10px] border-[4px] border-black bg-indigo-50" />
+            <div className="h-[20px] w-[20px] animate-[bounce_1.1s_ease-in-out_infinite] rounded-[10px] border-[4px] border-black bg-indigo-50" />
+            <div className="h-[20px] w-[20px] animate-[bounce_.9s_ease-in-out_infinite] rounded-[10px] border-[4px] border-black bg-indigo-50" />
+          </div>
+        ) : (
+          <>
+            <div
+              className="fixed py-1 px-2 mt-[-40px] ml-0 md:ml-[-10px] w-max rounded-md border 
                         border-indigo-800 bg-indigo-600"
-          >
-            <p className="text-lg font-bold text-white">
-              {data.length} Result Quotes
-            </p>
-          </div>
-          <div className="mt-3 flex flex-col items-center lg:flex-row lg:justify-center lg:flex-wrap">
-            <SearchQuoteResults data={data} />
-          </div>
-        </div>
-      )}
+            >
+              <p className="text-lg font-bold text-white">
+                {data?.length} Result Quotes
+              </p>
+            </div>
+
+            <div className="mt-3 flex flex-col items-center lg:flex-row lg:justify-center lg:flex-wrap">
+              <SearchQuoteResults data={data} />
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };
