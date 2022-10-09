@@ -34,7 +34,7 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
     open: { opacity: 1, scale: 1 },
   };
   return (
-    <div className="mx-4 flex flex-col my-3">
+    <div className="mx-4 flex flex-col my-3 ">
       <motion.div
         className="text-lg font-bold"
         animate={currAuthor ? "open" : "closed"}
@@ -55,7 +55,7 @@ const AuthorQuotes: FC<Props> = ({ currAuthor, updateBio }) => {
               // <div key={q.id}>
               <div
                 key={q.id}
-                className="text-md m-2 p-2 border border-gray-700 rounded-lg bg-indigo-100"
+                className="bg-gray-100 text-md m-2 p-2 border border-gray-700 rounded-lg"
               >
                 {q.quote}
               </div>
